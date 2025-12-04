@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const siteConfig = {
   name: 'Olaris Consulting Limited',
   description:
-    'Leading UK fleet management consultancy specializing in zero-emission mobility, strategic growth, and blockchain ESG solutions. Based in Charlbury, Oxfordshire.',
+    'Leading UK fleet management consultancy specializing in zero-emission mobility, strategic growth, and blockchain ESG solutions. Based in Aston, Oxfordshire.',
   url: 'https://olaris.co.uk',
   ogImage: 'https://olaris.co.uk/og-image.jpg',
   links: {
@@ -14,9 +14,9 @@ export const siteConfig = {
     email: 'alan@olaris.co.uk',
     phone: '+44-7919-35-40-68',
     address: {
-      street: '1 Graces Court, The Slade',
-      city: 'Charlbury',
-      postcode: 'OX7 3EG',
+      street: '10 Bull Street, Aston',
+      city: 'Nr Bampton',
+      postcode: 'OX18 2DN',
       country: 'United Kingdom',
     },
   },
@@ -38,7 +38,8 @@ export function constructMetadata({
     description,
     keywords: [
       'fleet management UK',
-      'Charlbury consulting',
+      'Aston consulting',
+      'Oxfordshire consulting',
       'zero-emission vehicles',
       'ESG solutions',
       'blockchain fleet management',
@@ -138,8 +139,8 @@ export const localBusinessSchema = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 51.8726, // Charlbury coordinates
-    longitude: -1.4832,
+    latitude: 51.7134, // Aston (Nr Bampton) coordinates
+    longitude: -1.5498,
   },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
