@@ -151,7 +151,7 @@ const Hero = () => {
     className: "text-xl md:text-2xl mb-8",
     "data-aos": "fade-up",
     "data-aos-delay": "100"
-  }, "Charlbury-based experts in fleet management, strategic growth, and blockchain ESG solutions."), /*#__PURE__*/React.createElement("div", {
+  }, "Oxfordshire-based experts in fleet management, strategic growth, and blockchain ESG solutions."), /*#__PURE__*/React.createElement("div", {
     className: "space-x-4"
   }, /*#__PURE__*/React.createElement("a", {
     href: "#contact",
@@ -201,7 +201,7 @@ const About = () => /*#__PURE__*/React.createElement("section", {
   className: "text-4xl font-extrabold mb-6 text-blue-800 dark:text-blue-300"
 }, "About Us"), /*#__PURE__*/React.createElement("p", {
   className: "max-w-3xl mx-auto text-gray-700 dark:text-gray-300 leading-relaxed mb-4"
-}, "Olaris Consulting Limited, based in Charlbury, UK, delivers strategic growth initiatives and operational excellence in fleet management, mobility, and digital transformation. Our expertise in blockchain and ESG solutions empowers businesses to thrive in a competitive landscape."), /*#__PURE__*/React.createElement("div", {
+}, "Olaris Consulting Limited, based in Oxfordshire, UK, delivers strategic growth initiatives and operational excellence in fleet management, mobility, and digital transformation. Our expertise in blockchain and ESG solutions empowers businesses to thrive in a competitive landscape."), /*#__PURE__*/React.createElement("div", {
   className: "mt-6"
 }, /*#__PURE__*/React.createElement("video", {
   autoPlay: true,
@@ -343,15 +343,15 @@ const FeaturedBlogPosts = () => /*#__PURE__*/React.createElement("section", {
   "data-aos-delay": "200"
 }, /*#__PURE__*/React.createElement("img", {
   src: "/images/fleet-management-charlbury.jpg",
-  alt: "Fleet Management in Charlbury",
+  alt: "Fleet Management in Oxfordshire",
   className: "w-full h-48 object-cover rounded-t-lg"
 }), /*#__PURE__*/React.createElement("div", {
   className: "p-6"
 }, /*#__PURE__*/React.createElement("h2", {
   className: "text-xl font-semibold text-blue-700 dark:text-blue-300 mb-2"
-}, "Fleet Management Solutions in Charlbury"), /*#__PURE__*/React.createElement("p", {
+}, "Fleet Management Solutions in Oxfordshire"), /*#__PURE__*/React.createElement("p", {
   className: "text-gray-600 dark:text-gray-300 mb-4"
-}, "Learn why Olaris Consulting is the top choice for fleet management in Charlbury, UK."), /*#__PURE__*/React.createElement("a", {
+}, "Learn why Olaris Consulting is the top choice for fleet management in Oxfordshire, UK."), /*#__PURE__*/React.createElement("a", {
   href: "blog-post-2.html",
   className: "text-blue-600 dark:text-blue-300 hover:underline"
 }, "Read More"))))));
@@ -430,7 +430,7 @@ const Contact = () => {
     loading: "lazy"
   }), /*#__PURE__*/React.createElement("p", {
     className: "text-lg leading-relaxed"
-  }, "\uD83D\uDC4B Hi, I'm Alan Carreras, Charlbury-based consultant. Let's discuss your business goals!")), /*#__PURE__*/React.createElement("form", {
+  }, "\uD83D\uDC4B Hi, I'm Alan Carreras, Oxfordshire-based consultant. Let's discuss your business goals!")), /*#__PURE__*/React.createElement("form", {
     id: "contactForm",
     onSubmit: validateForm,
     className: "bg-white rounded-lg p-8 shadow-2xl space-y-4 text-gray-800"
@@ -476,7 +476,7 @@ const Footer = () => {
   }, []);
   return /*#__PURE__*/React.createElement("footer", {
     className: "text-center py-6 text-gray-500 dark:text-gray-300 text-sm bg-white dark:bg-gray-800"
-  }, /*#__PURE__*/React.createElement("p", null, "\xA9 2025 Olaris Consulting Limited. All rights reserved."), /*#__PURE__*/React.createElement("p", null, "Olaris Consulting Limited, 1 Graces Court, The Slade, Charlbury OX7 3EG, UK | Phone: +44-7919-35-40-68 | Email: ", /*#__PURE__*/React.createElement("a", {
+  }, /*#__PURE__*/React.createElement("p", null, "\xA9 2025 Olaris Consulting Limited. All rights reserved."), /*#__PURE__*/React.createElement("p", null, "Olaris Consulting Limited, 10 Bull Street, Aston, Nr Bampton OX18 2DN, UK | Phone: +44-7919-35-40-68 | Email: ", /*#__PURE__*/React.createElement("a", {
     ref: emailRef,
     className: "text-gray-600 dark:text-gray-300 hover:underline"
   })), /*#__PURE__*/React.createElement("div", {

@@ -100,7 +100,7 @@ const Hero = () => {
       <div className="relative z-10 text-center px-6 fade-in-hero">
         <h1 className="text-5xl md:text-7xl font-extrabold mb-2" data-aos="fade-up">Olaris Consulting Limited</h1>
         <p className="text-lg md:text-xl mb-4" data-aos="fade-up" data-aos-delay="50">Driving Sustainable Growth with Blockchain Innovation</p>
-        <p className="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="100">Charlbury-based experts in fleet management, strategic growth, and blockchain ESG solutions.</p>
+        <p className="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="100">Oxfordshire-based experts in fleet management, strategic growth, and blockchain ESG solutions.</p>
         <div className="space-x-4">
           <a href="#contact" className="bg-gradient-to-r from-blue-600 to-blue-800 py-3 px-8 rounded-full text-lg font-bold hover:scale-105 transform transition" data-aos="fade-up" data-aos-delay="200" onClick={handleCTAClick}>
             {variant === 'A' ? 'Request a Free Consultation' : 'Get a Free Quote'}
@@ -125,7 +125,7 @@ const About = () => (
     <div className="container mx-auto px-6 text-center" data-aos="fade-up">
       <h2 className="text-4xl font-extrabold mb-6 text-blue-800 dark:text-blue-300">About Us</h2>
       <p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Olaris Consulting Limited, based in Charlbury, UK, delivers strategic growth initiatives and operational excellence in fleet management, mobility, and digital transformation. Our expertise in blockchain and ESG solutions empowers businesses to thrive in a competitive landscape.
+        Olaris Consulting Limited, based in Oxfordshire, UK, delivers strategic growth initiatives and operational excellence in fleet management, mobility, and digital transformation. Our expertise in blockchain and ESG solutions empowers businesses to thrive in a competitive landscape.
       </p>
       <div className="mt-6">
         <video autoPlay muted loop playsInline loading="lazy" className="w-full max-w-md mx-auto rounded-lg shadow-md">
@@ -202,10 +202,10 @@ const FeaturedBlogPosts = () => (
           </div>
         </div>
         <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
-          <img src="/images/fleet-management-charlbury.jpg" alt="Fleet Management in Charlbury" className="w-full h-48 object-cover rounded-t-lg" />
+          <img src="/images/fleet-management-charlbury.jpg" alt="Fleet Management in Oxfordshire" className="w-full h-48 object-cover rounded-t-lg" />
           <div className="p-6">
-            <h2 className="text-xl font-semibold text-blue-700 dark:text-blue-300 mb-2">Fleet Management Solutions in Charlbury</h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">Learn why Olaris Consulting is the top choice for fleet management in Charlbury, UK.</p>
+            <h2 className="text-xl font-semibold text-blue-700 dark:text-blue-300 mb-2">Fleet Management Solutions in Oxfordshire</h2>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">Learn why Olaris Consulting is the top choice for fleet management in Oxfordshire, UK.</p>
             <a href="blog-post-2.html" className="text-blue-600 dark:text-blue-300 hover:underline">Read More</a>
           </div>
         </div>
@@ -270,7 +270,7 @@ const Contact = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-6" data-aos="fade-up">
         <div className="flex flex-col items-center text-center">
           <img src="/images/profile.png" alt="Alan Carreras, Consultant" className="rounded-lg shadow-2xl w-60 h-60 object-cover mb-6" loading="lazy" />
-          <p className="text-lg leading-relaxed">👋 Hi, I'm Alan Carreras, Charlbury-based consultant. Let's discuss your business goals!</p>
+          <p className="text-lg leading-relaxed">👋 Hi, I'm Alan Carreras, Oxfordshire-based consultant. Let's discuss your business goals!</p>
         </div>
         <form id="contactForm" onSubmit={validateForm} className="bg-white rounded-lg p-8 shadow-2xl space-y-4 text-gray-800">
           <div>
@@ -308,7 +308,7 @@ const Footer = () => {
     <footer className="text-center py-6 text-gray-500 dark:text-gray-300 text-sm bg-white dark:bg-gray-800">
       <p>© 2025 Olaris Consulting Limited. All rights reserved.</p>
       <p>
-        Olaris Consulting Limited, 1 Graces Court, The Slade, Charlbury OX7 3EG, UK | Phone: +44-7919-35-40-68 | Email: <a ref={emailRef} className="text-gray-600 dark:text-gray-300 hover:underline"></a>
+        Olaris Consulting Limited, 10 Bull Street, Aston, Nr Bampton OX18 2DN, UK | Phone: +44-7919-35-40-68 | Email: <a ref={emailRef} className="text-gray-600 dark:text-gray-300 hover:underline"></a>
       </p>
       <div className="mt-2">
         <a href="https://linkedin.com/company/olaris-consulting-limited" className="text-gray-600 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-500 mx-2">LinkedIn</a> |
