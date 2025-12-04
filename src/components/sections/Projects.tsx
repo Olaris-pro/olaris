@@ -8,6 +8,21 @@ import type { Project } from '@/types'
 
 const projects: Project[] = [
   {
+    id: 'covase-fleet-intelligence',
+    title: 'COVASE Enterprise Fleet Intelligence Platform',
+    description: 'Transformed fleet management into an enterprise SaaS platform with AI/ML predictive analytics and bank-level security.',
+    details: 'Architected a cutting-edge multi-tenant platform serving major UK organizations with AI-powered predictive maintenance, driver safety scoring, and zero-emission transition planning. Features include XGBoost ML models, 100% GDPR compliance, and comprehensive ESG tracking across Scope 1/2/3 emissions.',
+    videoWebm: 'https://res.cloudinary.com/dd7svdirf/video/upload/v1745525997/globe_uuq61l.webm',
+    videoMp4: 'https://res.cloudinary.com/dd7svdirf/video/upload/v1745526034/globe_vvqqkg.mp4',
+    fallbackImage: 'https://res.cloudinary.com/dd7svdirf/image/upload/v1745526178/logo_mxa378.jpg',
+    metrics: [
+      { label: 'Vehicles Managed', value: '293+' },
+      { label: 'Records Processed', value: '1.9M+' },
+      { label: 'Annual Value', value: '>£250K' },
+    ],
+    tags: ['AI/ML', 'Enterprise SaaS', 'GDPR', 'Zero-Emission'],
+  },
+  {
     id: 'jurni-leasing',
     title: 'Jurni Leasing Expansion',
     description: 'Successfully scaled Jurni Leasing, formerly Bridle Vehicle Leasing into a Top 10 UK leasing broker.',

@@ -3,46 +3,50 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Truck, TrendingUp, Users, Network, ChevronDown, ChevronUp } from 'lucide-react'
+import { Truck, TrendingUp, Users, Network, ChevronDown, ChevronUp, Brain, Leaf, Zap, Shield } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import type { Service } from '@/types'
 
 const services: Service[] = [
   {
-    id: 'fleet-management',
-    title: 'Fleet Management UK',
-    description: 'Optimise operations with strategic fleet consulting for efficiency, sustainability, and profitability.',
-    details: 'Our services cover vehicle leasing optimisation, smart telematics, and future-proof compliance for seamless fleet management. We help reduce costs by up to 10% while improving sustainability.',
-    icon: 'truck',
-    features: ['Vehicle leasing optimisation', 'Smart telematics integration', 'Compliance management', 'Cost reduction strategies'],
+    id: 'ai-fleet-intelligence',
+    title: 'AI Fleet Intelligence',
+    description: 'Machine learning-powered predictive maintenance and driver safety scoring delivering measurable ROI.',
+    details: 'XGBoost ML models analyzing 1.9M+ telemetry records. Predictive maintenance system with 40+ engineered features, real-time risk classification, and driver behavior analytics. Successfully deployed for major UK organizations achieving >£15K annual savings per client.',
+    icon: 'brain',
+    features: ['Predictive maintenance (ML-powered)', 'Driver safety scoring (insurance integration)', 'Real-time anomaly detection', '>£15K annual ROI per client'],
   },
   {
-    id: 'expansion-strategy',
-    title: 'Expansion Strategy',
-    description: 'Sustainable growth through data-driven market intelligence and risk-averse scaling.',
-    details: 'We map competitor landscapes, identify white-space opportunities, and deliver actionable expansion blueprints tailored to your business goals.',
-    icon: 'trending-up',
-    features: ['Market analysis', 'Competitor mapping', 'Growth blueprints', 'Risk assessment'],
+    id: 'zero-emission-transformation',
+    title: 'Zero-Emission Transformation',
+    description: '5-year TCO analysis, 3-phase transition roadmaps, and charging infrastructure planning for EV fleets.',
+    details: 'Comprehensive EV transition planning with OpenChargeMap integration, depot vs public charging cost-benefit analysis, and government incentive optimization. Integration with 500+ real EV models and payback period calculations. Proven >£50K engagement value.',
+    icon: 'zap',
+    features: ['5-year TCO calculator (ICE vs EV)', '3-phase transition roadmaps', 'Charging infrastructure planning', '>£50K project value'],
   },
   {
-    id: 'strategic-advisory',
-    title: 'Strategic Advisory',
-    description: 'Align your fleet goals with corporate vision and long-term growth strategies.',
-    details: 'Custom C-level advisory to integrate fleet transformation into overall business innovation pathways.',
-    icon: 'users',
-    features: ['C-level consulting', 'Strategic planning', 'Business transformation', 'Long-term roadmaps'],
+    id: 'esg-carbon-intelligence',
+    title: 'ESG & Carbon Intelligence',
+    description: 'Full Scope 1/2/3 emissions tracking, SECR compliance automation, and carbon offset marketplace integration.',
+    details: 'UK DEFRA 2024 emission factors with automated SECR report generation (PDF + JSON). Real-time ESG dashboards tracking carbon emissions for mixed fleets. Custom fuel/energy rates tracking home EV charging savings (up to 70% vs market rates). Delivering >£4K annual compliance time savings.',
+    icon: 'leaf',
+    features: ['Scope 1/2/3 emissions tracking', 'SECR compliance automation', 'Carbon offset marketplace', '>£4K annual savings'],
   },
   {
-    id: 'digital-integration',
-    title: 'Digital Integration',
-    description: 'Blockchain, Azure cloud, ESG tracking — drive next-generation compliance and efficiency.',
-    details: 'Implement digital roadmaps tailored to your business size, ensuring transparency, security, and scalability.',
-    icon: 'network',
-    features: ['Blockchain solutions', 'Cloud integration', 'ESG tracking', 'Digital transformation'],
+    id: 'enterprise-integration-security',
+    title: 'Enterprise Integration & Security',
+    description: 'Multi-tenant SaaS architecture, 100% GDPR compliance, webhook infrastructure, and grey fleet management.',
+    details: 'Bank-level security with JWT + Row-Level Security (RLS) achieving 88.9% validation rating and 100% tenant isolation. Full GDPR Article 15 compliance with automated DSAR processing. Webhook infrastructure supporting 27 event types with circuit breaker and dead letter queue. Foundation for >£15K annual integration efficiency.',
+    icon: 'shield',
+    features: ['100% GDPR Article 15 compliant', 'Bank-level security (JWT + RLS)', 'Webhook infrastructure (27 events)', '>£15K annual efficiency'],
   },
 ]
 
 const iconMap = {
+  brain: Brain,
+  zap: Zap,
+  leaf: Leaf,
+  shield: Shield,
   truck: Truck,
   'trending-up': TrendingUp,
   users: Users,

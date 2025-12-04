@@ -11,10 +11,17 @@ export function About() {
   })
 
   const features = [
-    'Pioneering sustainable business transformations',
-    'Expert fleet management and strategic advisory',
-    'Industry-leading insights and innovation',
-    'Passionate commitment to sustainability',
+    'Enterprise SaaS platforms serving 6+ major UK organizations',
+    'AI/ML predictive analytics delivering £254K+ annual value',
+    '100% GDPR compliant with bank-level security architecture',
+    'Zero-emission transition strategies with proven ROI',
+  ]
+
+  const stats = [
+    { value: '293+', label: 'Vehicles Managed' },
+    { value: '1.9M+', label: 'Records Processed' },
+    { value: '£254K+', label: 'Annual Value' },
+    { value: '100%', label: 'GDPR Compliant' },
   ]
 
   return (
@@ -70,12 +77,27 @@ export function About() {
             className="space-y-6"
           >
             <p className="text-lg text-foreground/90">
-              Olaris was founded on a commitment to pioneering sustainable business transformations through expert fleet management and strategic advisory services.
+              Olaris leads fleet management technology and zero-emission transformation. As the architect of enterprise fleet intelligence platforms, we deliver cutting-edge solutions to major UK organizations across environmental conservation, renewable energy, and manufacturing sectors.
             </p>
             <p className="text-lg text-foreground/90">
-              Our seasoned professionals, led by experienced fleet management executive{' '}
-              <span className="font-semibold text-primary">Alan Carreras</span>, bring unparalleled expertise, industry-leading insights, and a passion for sustainability to every client engagement.
+              Led by <span className="font-semibold text-primary">Alan Carreras</span>, our team specializes in Enterprise SaaS platforms with multi-tenant security, AI/ML predictive analytics, GDPR compliance frameworks, and zero-emission transition strategies.
             </p>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 gap-4 py-6">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={inView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+                  className="text-center p-4 rounded-lg bg-primary/5 border border-primary/10"
+                >
+                  <div className="text-3xl font-bold text-primary font-heading">{stat.value}</div>
+                  <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
 
             <div className="space-y-4">
               {features.map((feature, index) => (

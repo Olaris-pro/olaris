@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const siteConfig = {
   name: 'Olaris Consulting Limited',
   description:
-    'Leading UK fleet management consultancy specializing in zero-emission mobility, strategic growth, and blockchain ESG solutions. Based in Aston, Oxfordshire.',
+    'Enterprise fleet intelligence platform with AI/ML predictive analytics. Serving 6+ major UK organizations with 293+ vehicles, 1.9M+ records processed, delivering >£250K annual value. 100% GDPR compliant with bank-level security.',
   url: 'https://olaris.co.uk',
   ogImage: 'https://olaris.co.uk/og-image.jpg',
   links: {
@@ -38,6 +38,17 @@ export function constructMetadata({
     description,
     keywords: [
       'fleet management UK',
+      'AI predictive maintenance UK',
+      'enterprise fleet intelligence platform',
+      'GDPR compliant fleet management',
+      'zero-emission fleet transition',
+      'multi-tenant fleet SaaS',
+      'AI driver safety scoring',
+      'SECR compliance automation',
+      'EV TCO calculator',
+      'fleet carbon emissions tracking',
+      'XGBoost predictive maintenance',
+      'bank-level security fleet',
       'Aston consulting',
       'Oxfordshire consulting',
       'zero-emission vehicles',
@@ -170,36 +181,36 @@ export const serviceSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Fleet Management UK',
+          name: 'AI Fleet Intelligence',
           description:
-            'Optimise operations with strategic fleet consulting for efficiency, sustainability, and profitability.',
+            'Machine learning-powered predictive maintenance and driver safety scoring delivering measurable ROI. XGBoost ML models analyzing 1.9M+ telemetry records.',
         },
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Expansion Strategy',
+          name: 'Zero-Emission Transformation',
           description:
-            'Sustainable growth through data-driven market intelligence and risk-averse scaling.',
+            '5-year TCO analysis, 3-phase transition roadmaps, and charging infrastructure planning for EV fleets with proven >£50K engagement value.',
         },
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Strategic Advisory',
+          name: 'ESG & Carbon Intelligence',
           description:
-            'Align your fleet goals with corporate vision and long-term growth strategies.',
+            'Full Scope 1/2/3 emissions tracking, SECR compliance automation, and carbon offset marketplace integration delivering >£4K annual compliance time savings.',
         },
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Digital Integration',
+          name: 'Enterprise Integration & Security',
           description:
-            'Blockchain, Azure cloud, ESG tracking — drive next-generation compliance and efficiency.',
+            'Multi-tenant SaaS architecture, 100% GDPR compliance, webhook infrastructure, and bank-level security with JWT + Row-Level Security.',
         },
       },
     ],

@@ -73,7 +73,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-lg border border-white/20"
           >
             <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
-            <span>Leading UK Fleet Management Experts</span>
+            <span>Enterprise Fleet Intelligence • 100% GDPR Compliant • AI-Powered</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -110,7 +110,7 @@ export function Hero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="mx-auto max-w-2xl text-xl text-blue-100 sm:text-2xl md:text-3xl"
           >
-            Strategic consulting and zero-emission mobility solutions to drive your business forward
+            AI/ML predictive analytics and zero-emission transformation delivering measurable ROI for UK enterprises
           </motion.p>
 
           {/* Stats */}
@@ -121,9 +121,9 @@ export function Hero() {
             className="flex flex-wrap items-center justify-center gap-8 text-white"
           >
             {[
-              { value: '30,000+', label: 'Vehicles Managed' },
-              { value: '8%', label: 'Cost Reduction' },
-              { value: 'Top 10', label: 'UK Broker' },
+              { value: '293+', label: 'Vehicles Managed' },
+              { value: '1.9M+', label: 'Records Processed' },
+              { value: '>£250K', label: 'Annual Value' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
