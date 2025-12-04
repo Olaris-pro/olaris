@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Truck, TrendingUp, Users, Network, ChevronDown, ChevronUp, Brain, Leaf, Zap, Shield, Car } from 'lucide-react'
+import { Truck, TrendingUp, Users, Network, ChevronDown, ChevronUp, Brain, Leaf, Zap, Shield, Car, ClipboardCheck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import type { Service } from '@/types'
 
@@ -48,6 +48,14 @@ const services: Service[] = [
     icon: 'car',
     features: ['Live DVLA API vehicle checks', 'Driver licence validation', 'Grey fleet onboarding portal', 'Automated compliance alerts'],
   },
+  {
+    id: 'leased-fleet-compliance',
+    title: 'Leased Fleet Compliance',
+    description: 'Rule-based automated DVLA API checks for leased fleet duty of care with secure tenant access.',
+    details: 'Automated compliance management for leased vehicles with rule-based DVLA API live checking. GDPR compliant with secure permission-based tenant access. Supports nominated drivers and contractor functionality with configurable check frequencies and automated alert workflows.',
+    icon: 'clipboard-check',
+    features: ['Rule-based automated DVLA checks', 'Nominated driver & contractor support', 'Secure permission-based access', 'GDPR compliant tenant isolation'],
+  },
 ]
 
 const iconMap = {
@@ -56,6 +64,7 @@ const iconMap = {
   leaf: Leaf,
   shield: Shield,
   car: Car,
+  'clipboard-check': ClipboardCheck,
   truck: Truck,
   'trending-up': TrendingUp,
   users: Users,

@@ -50,11 +50,14 @@ export function constructMetadata({
       'XGBoost predictive maintenance',
       'bank-level security fleet',
       'grey fleet management UK',
+      'leased fleet compliance',
       'DVLA API integration',
       'driver duty of care compliance',
       'driver licence validation',
       'fleet compliance checks',
       'grey fleet onboarding',
+      'nominated driver management',
+      'contractor fleet compliance',
       'Aston consulting',
       'Oxfordshire consulting',
       'zero-emission vehicles',
@@ -226,6 +229,15 @@ export const serviceSchema = {
           name: 'Grey Fleet & Duty of Care',
           description:
             'Complete grey fleet management with live DVLA API integration for vehicle and driver compliance checks, licence validation, and automated expiry alerts.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Leased Fleet Compliance',
+          description:
+            'Rule-based automated DVLA API checks for leased fleet duty of care with secure permission-based tenant access, nominated driver and contractor functionality.',
         },
       },
     ],
