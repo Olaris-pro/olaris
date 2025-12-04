@@ -13,7 +13,7 @@ export function About() {
   const features = [
     'Enterprise SaaS platforms serving 6+ major UK organizations',
     'AI/ML predictive analytics delivering £254K+ annual value',
-    '100% GDPR compliant with bank-level security architecture',
+    '100% GDPR compliant with tenant-level security architecture',
     'Zero-emission transition strategies with proven ROI',
   ]
 
