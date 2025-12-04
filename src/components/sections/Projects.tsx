@@ -11,7 +11,7 @@ const projects: Project[] = [
     id: 'covase-fleet-intelligence',
     title: 'COVASE Enterprise Fleet Intelligence Platform',
     description: 'Transformed fleet management into an enterprise SaaS platform with AI/ML predictive analytics and bank-level security.',
-    details: 'Architected a cutting-edge multi-tenant platform serving major UK organizations with AI-powered predictive maintenance, driver safety scoring, and zero-emission transition planning. Features include XGBoost ML models, 100% GDPR compliance, and comprehensive ESG tracking across Scope 1/2/3 emissions.',
+    details: 'Architected a cutting-edge multi-tenant platform serving major UK organisations with AI-powered predictive maintenance, driver safety scoring, and zero-emission transition planning. Features include XGBoost ML models, 100% GDPR compliance, and comprehensive ESG tracking across Scope 1/2/3 emissions.',
     videoWebm: 'https://res.cloudinary.com/dd7svdirf/video/upload/v1745525997/globe_uuq61l.webm',
     videoMp4: 'https://res.cloudinary.com/dd7svdirf/video/upload/v1745526034/globe_vvqqkg.mp4',
     fallbackImage: 'https://res.cloudinary.com/dd7svdirf/image/upload/v1745526178/logo_mxa378.jpg',
