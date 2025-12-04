@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Truck, TrendingUp, Users, Network, ChevronDown, ChevronUp, Brain, Leaf, Zap, Shield } from 'lucide-react'
+import { Truck, TrendingUp, Users, Network, ChevronDown, ChevronUp, Brain, Leaf, Zap, Shield, Car } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import type { Service } from '@/types'
 
@@ -35,10 +35,18 @@ const services: Service[] = [
   {
     id: 'enterprise-integration-security',
     title: 'Enterprise Integration & Security',
-    description: 'Multi-tenant SaaS architecture, 100% GDPR compliance, webhook infrastructure, and grey fleet management.',
+    description: 'Multi-tenant SaaS architecture, 100% GDPR compliance, webhook infrastructure, and automated compliance.',
     details: 'Tenant-level security with JWT + Row-Level Security (RLS). Full GDPR Article 15 compliance with automated DSAR processing. Webhook infrastructure supporting event types with circuit breaker and dead letter queue. Foundation for >£15K annual integration efficiency.',
     icon: 'shield',
     features: ['100% GDPR Article 15 compliant', 'Tenant-level security (JWT + RLS)', 'Webhook infrastructure (27 events)', '>£15K annual efficiency'],
+  },
+  {
+    id: 'grey-fleet-duty-of-care',
+    title: 'Grey Fleet & Duty of Care',
+    description: 'Complete grey fleet management with live DVLA API integration for vehicle and driver compliance checks.',
+    details: 'Comprehensive driver duty of care compliance featuring real-time DVLA API checks for licence validation, vehicle MOT status, and tax verification. Grey fleet onboarding with document management, insurance verification, and automated expiry alerts. Reduces compliance risk and administrative burden.',
+    icon: 'car',
+    features: ['Live DVLA API vehicle checks', 'Driver licence validation', 'Grey fleet onboarding portal', 'Automated compliance alerts'],
   },
 ]
 
@@ -47,6 +55,7 @@ const iconMap = {
   zap: Zap,
   leaf: Leaf,
   shield: Shield,
+  car: Car,
   truck: Truck,
   'trending-up': TrendingUp,
   users: Users,

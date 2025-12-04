@@ -49,6 +49,12 @@ export function constructMetadata({
       'fleet carbon emissions tracking',
       'XGBoost predictive maintenance',
       'bank-level security fleet',
+      'grey fleet management UK',
+      'DVLA API integration',
+      'driver duty of care compliance',
+      'driver licence validation',
+      'fleet compliance checks',
+      'grey fleet onboarding',
       'Aston consulting',
       'Oxfordshire consulting',
       'zero-emission vehicles',
@@ -211,6 +217,15 @@ export const serviceSchema = {
           name: 'Enterprise Integration & Security',
           description:
             'Multi-tenant SaaS architecture, 100% GDPR compliance, webhook infrastructure, and bank-level security with JWT + Row-Level Security.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Grey Fleet & Duty of Care',
+          description:
+            'Complete grey fleet management with live DVLA API integration for vehicle and driver compliance checks, licence validation, and automated expiry alerts.',
         },
       },
     ],
