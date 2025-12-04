@@ -102,7 +102,7 @@ export function Contact() {
               <h3 className="text-2xl font-bold mb-2">Alan Carreras</h3>
               <p className="text-blue-200 mb-4">Founder & CEO</p>
               <p className="text-sm text-blue-100">
-                Charlbury-based consultant with over 15 years of fleet management expertise. Let's discuss your business goals together.
+                Oxfordshire-based consultant with 30 years of fleet management expertise. Let's discuss your business goals together.
               </p>
             </div>
 
@@ -145,8 +145,8 @@ export function Contact() {
                 <div>
                   <div className="font-semibold mb-1">Address</div>
                   <p className="text-blue-200">
-                    1 Graces Court, The Slade<br />
-                    Charlbury, OX7 3EG, UK
+                    10 Bull Street, Aston<br />
+                    Nr Bampton, OX18 2DN, UK
                   </p>
                 </div>
               </div>

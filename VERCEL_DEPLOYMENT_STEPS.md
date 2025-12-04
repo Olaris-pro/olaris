@@ -16,7 +16,7 @@ Open your terminal (Terminal.app on Mac) and run:
 cd "/Users/alancarreras/untitled folder/olaris"
 
 # Check current status
-git status
+git statugit statuss
 
 # Add all new files
 git add .

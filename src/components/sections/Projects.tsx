@@ -25,7 +25,7 @@ const projects: Project[] = [
   {
     id: 'blockchain-esg',
     title: 'Blockchain ESG Platform',
-    description: "Developed 'Perx', an innovative blockchain-based ESG Salary Sacrifice solution for fleet compliance.",
+    description: "Developed 'Perx', an innovative blockchain-enabled, ESG focus, Salary Sacrifice solution for fleet compliance.",
     details: 'Leveraging integrations across Power Automate, Azure, and Oracle Cloud. Enabled 100% compliance with ESG regulations through blockchain transparency.',
     videoWebm: 'https://res.cloudinary.com/dd7svdirf/video/upload/v1745525998/web-salsac_xjlnkq.webm',
     videoMp4: 'https://res.cloudinary.com/dd7svdirf/video/upload/v1745526172/web-salsac_gixh1e.mp4',

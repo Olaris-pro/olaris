@@ -14,7 +14,7 @@ const services: Service[] = [
     description: 'Optimise operations with strategic fleet consulting for efficiency, sustainability, and profitability.',
     details: 'Our services cover vehicle leasing optimisation, smart telematics, and future-proof compliance for seamless fleet management. We help reduce costs by up to 10% while improving sustainability.',
     icon: 'truck',
-    features: ['Vehicle leasing optimization', 'Smart telematics integration', 'Compliance management', 'Cost reduction strategies'],
+    features: ['Vehicle leasing optimisation', 'Smart telematics integration', 'Compliance management', 'Cost reduction strategies'],
   },
   {
     id: 'expansion-strategy',
