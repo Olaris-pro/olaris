@@ -16,8 +16,8 @@ const projects: Project[] = [
     videoMp4: 'https://res.cloudinary.com/dd7svdirf/video/upload/v1745526034/globe_vvqqkg.mp4',
     fallbackImage: 'https://res.cloudinary.com/dd7svdirf/image/upload/v1745526178/logo_mxa378.jpg',
     metrics: [
-      { label: 'Vehicles Managed', value: '>500+' },
-      { label: 'Records Processed', value: '1.9M+' },
+      { label: 'Vehicles Managed', value: '>500' },
+      { label: 'Records Processed', value: '>2M' },
       { label: 'Annual Value', value: '>£250K' },
     ],
     tags: ['AI/ML', 'DVLA API', 'Grey Fleet', 'Duty of Care'],
