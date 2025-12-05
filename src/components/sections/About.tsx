@@ -18,8 +18,8 @@ export function About() {
   ]
 
   const stats = [
-    { value: '293+', label: 'Vehicles Managed' },
-    { value: '1.9M+', label: 'Records Processed' },
+    { value: '500+', label: 'Vehicles Managed' },
+    { value: '>2M', label: 'Records Processed' },
     { value: '£254K+', label: 'Annual Value' },
     { value: '100%', label: 'GDPR Compliant' },
   ]

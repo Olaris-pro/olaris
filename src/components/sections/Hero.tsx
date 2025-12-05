@@ -121,8 +121,8 @@ export function Hero() {
             className="flex flex-wrap items-center justify-center gap-8 text-white"
           >
             {[
-              { value: '293+', label: 'Vehicles Managed' },
-              { value: '1.9M+', label: 'Records Processed' },
+              { value: '500+', label: 'Vehicles Managed' },
+              { value: '>2m', label: 'Records Processed' },
               { value: '>£250K', label: 'Annual Value' },
             ].map((stat, index) => (
               <motion.div
