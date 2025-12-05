@@ -11,9 +11,9 @@ export function About() {
   })
 
   const features = [
-    'Enterprise SaaS platforms serving 6+ major UK organizations',
+    'Enterprise SaaS platforms serving major UK organisations',
     'AI/ML predictive analytics delivering £254K+ annual value',
-    '100% GDPR compliant with tenant-level security architecture',
+    'GDPR compliant with tenant-level security architecture',
     'Zero-emission transition strategies with proven ROI',
   ]
 
@@ -77,10 +77,10 @@ export function About() {
             className="space-y-6"
           >
             <p className="text-lg text-foreground/90">
-              Olaris leads fleet management technology and zero-emission transformation. As the architect of enterprise fleet intelligence platforms, we deliver cutting-edge solutions to major UK organizations across environmental conservation, renewable energy, and manufacturing sectors.
+              Olaris leads fleet management technology and zero-emission transformation. As the architect of enterprise fleet intelligence platforms, we deliver cutting-edge solutions to major UK organisations across environmental conservation, renewable energy, and manufacturing sectors.
             </p>
             <p className="text-lg text-foreground/90">
-              Led by <span className="font-semibold text-primary">Alan Carreras</span>, our team specializes in Enterprise SaaS platforms with multi-tenant security, AI/ML predictive analytics, GDPR compliance frameworks, and zero-emission transition strategies.
+              Led by <span className="font-semibold text-primary">Alan Carreras</span>, our team specialises in Enterprise SaaS platforms with multi-tenant security, AI/ML predictive analytics, GDPR compliance frameworks, and zero-emission transition strategies.
             </p>
 
             {/* Stats Grid */}
