@@ -81,6 +81,9 @@ const nextConfig = {
   },
   async rewrites() {
     return [
+      // The homepage is a static page (markup, styles and WebGL script in one file), kept
+      // outside the React layout so it doesn't pick up the site Header and Footer.
+      { source: '/', destination: '/home.html' },
       {
         source: '/.well-known/olaris-signing-pubkey.json',
         destination: '/api/well-known/olaris-signing-pubkey',

@@ -1,0 +1,1599 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Olaris Consulting</title>
+<meta name="description" content="Olaris builds and launches products for UK vehicle leasing and fleet, and advises the businesses that run them.">
+<link rel="canonical" href="https://olaris.co.uk/">
+<link rel="icon" href="/olaris-mark.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Olaris Consulting">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://olaris.co.uk/">
+<meta property="og:title" content="Olaris Consulting">
+<meta property="og:description" content="Olaris builds and launches products for UK vehicle leasing and fleet, and advises the businesses that run them.">
+<meta property="og:image" content="https://olaris.co.uk/og-home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Olaris, over a UK motorway at night">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="msvalidate.01" content="581CE3401F19F5B8A577031D31B2894D">
+<script>
+/* Google Analytics, the same property as the rest of olaris.co.uk. Live domain only, so previews and local copies stay out of the figures */
+(function () {
+  if (location.hostname !== "olaris.co.uk") return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", "G-BFJ8CC0RNJ");
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "https://www.googletagmanager.com/gtag/js?id=G-BFJ8CC0RNJ";
+  document.head.appendChild(s);
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+body { margin: 0; padding: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+/* Layout: a four column blueprint grid with hairlines at 50% and 75%, in night, cobalt and stone bands joined by stepped edges.
+   The hero is a WebGL motorway at night that the camera dives into as you scroll. Single committed look.
+   The hero carries the drama. Everything after it stays calm, with type doing the work. */
+:root {
+  --cobalt: #1d2bb0;
+  --night: #060a2e;
+  --stone: #e6e4de;
+  --paper: #f4f3ef;
+  --ink: #151738;
+  --signal: #ff8a3d;
+  --on-cobalt: #ffffff;
+  --on-cobalt-soft: rgba(255, 255, 255, 0.72);
+  --rule-cobalt: rgba(255, 255, 255, 0.22);
+  --rule-stone: rgba(29, 43, 176, 0.26);
+  --display: "Geist", "Helvetica Neue", Arial, sans-serif;
+  --body: "Geist", "Helvetica Neue", Arial, sans-serif;
+  --mono: "Geist Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  --gutter: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+  --ease: cubic-bezier(0.2, 0.7, 0.1, 1);
+  --hh: 90px;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--stone);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  background: var(--cobalt);
+}
+/* Film grain over everything */
+body::after {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  z-index: 70;
+  pointer-events: none;
+  opacity: 0.11;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  animation: grain 0.9s steps(5) infinite;
+}
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-3%, 2%); }
+  50% { transform: translate(2%, -3%); }
+  75% { transform: translate(-2%, -1%); }
+  100% { transform: translate(3%, 3%); }
+}
+main { overflow-x: clip; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+/* Intro screen */
+.pre {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--night);
+  color: var(--on-cobalt);
+  display: grid;
+  place-items: center;
+  clip-path: inset(0 0 0 0);
+  animation: pre-out 0.8s var(--ease) 2.2s forwards;
+}
+.pre.done { animation: pre-out 0.9s var(--ease) forwards; }
+@keyframes pre-out { to { clip-path: inset(0 0 100% 0); visibility: hidden; } }
+.pre-in { display: flex; flex-direction: column; align-items: center; gap: 22px; }
+.pre svg { width: 64px; height: 82px; }
+.pre svg path, .pre svg circle.ring { stroke-dasharray: 70; stroke-dashoffset: 70; animation: draw 1s var(--ease) forwards; }
+.pre svg circle.dot { opacity: 0; animation: pop 0.4s ease 0.7s forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes pop { to { opacity: 1; } }
+.pre .count { font-family: var(--mono); font-size: 13px; letter-spacing: 0.2em; color: var(--on-cobalt-soft); }
+
+/* Cursor follower */
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
+  border-radius: 50%;
+  background: #ffffff;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 90;
+  transform: translate3d(-100px, -100px, 0);
+  transition: width 0.35s var(--ease), height 0.35s var(--ease), margin 0.35s var(--ease);
+}
+.cursor.big { width: 64px; height: 64px; margin: -32px 0 0 -32px; }
+
+/* Shared */
+.wrap {
+  padding-left: calc(var(--gutter) + 8px);
+  padding-right: calc(var(--gutter-r) + 8px);
+  position: relative;
+}
+.mono {
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.band { position: relative; }
+.band > .wrap { z-index: 1; }
+.skip {
+  position: fixed;
+  left: var(--gutter);
+  top: calc(env(safe-area-inset-top, 0px) + 8px);
+  z-index: 120;
+  background: var(--paper);
+  color: var(--cobalt);
+  padding: 10px 14px;
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+.skip:focus { transform: none; }
+.band.cobalt { background: var(--cobalt); color: var(--on-cobalt); --rule: var(--rule-cobalt); }
+.band.stone { background: var(--stone); color: var(--ink); --rule: var(--rule-stone); }
+.band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--rule), var(--rule)) 50% 0 / 1px 100% no-repeat,
+    linear-gradient(var(--rule), var(--rule)) 75% 0 / 1px 100% no-repeat;
+}
+.cols { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; }
+.cols > * { min-width: 0; }
+.ch { display: inline-block; text-align: center; }
+
+/* Header */
+.bar {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 20;
+  background: var(--cobalt);
+  color: var(--on-cobalt);
+  border-bottom: 1px solid var(--rule-cobalt);
+}
+.bar .cols { align-items: start; padding-block: 14px; }
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  grid-column: 1 / span 2;
+  justify-self: start;
+}
+.brand svg { width: 26px; height: 33px; flex: none; }
+.brand .mono { letter-spacing: 0.08em; }
+.nav { display: flex; flex-direction: column; gap: 2px; padding-left: 16px; }
+.nav a { text-decoration: none; opacity: 0.86; }
+.nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 3px; }
+.nav-b { flex-direction: row; justify-content: space-between; align-items: start; }
+.nav-b .links { display: flex; flex-direction: column; gap: 2px; }
+.btn {
+  display: inline-block;
+  background: var(--paper);
+  color: var(--cobalt);
+  text-decoration: none;
+  padding: 12px 16px;
+  border: 1px solid var(--paper);
+  transition: background 0.25s ease, color 0.25s ease, transform 0.3s var(--ease);
+}
+.btn:hover { background: transparent; color: var(--on-cobalt); }
+
+/* Hero */
+.hero {
+  overflow: hidden;
+  background: radial-gradient(ellipse at 60% 38%, #24309a 0%, #0b1150 42%, #050826 100%);
+  color: var(--on-cobalt);
+  --rule: var(--rule-cobalt);
+}
+#gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.hero .wash { position: absolute; inset: 0; z-index: 2; background: var(--cobalt); opacity: 0; pointer-events: none; }
+.hero .inner {
+  position: relative;
+  z-index: 1;
+  min-height: max(560px, calc(100vh - var(--hh)));
+  min-height: max(560px, calc(100svh - var(--hh)));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 48px;
+  padding-block: 48px 0;
+}
+.hero .fade { will-change: opacity; }
+.tagline {
+  grid-column: 4;
+  margin: 0;
+  padding-left: 16px;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 400;
+  text-wrap: balance;
+}
+.hud { color: var(--on-cobalt-soft); margin-bottom: 4px; }
+.hud .c3 { grid-column: 3; padding-left: 16px; }
+.hud .c4 { grid-column: 4; padding-left: 16px; }
+.title {
+  margin: 0 0 -0.17em -0.05em;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(110px, 36vw, 780px);
+  line-height: 1;
+  letter-spacing: -0.065em;
+  white-space: nowrap;
+  overflow: hidden;
+  transform-origin: 0 100%;
+}
+.title .ch {
+  font-weight: 300;
+  transition: font-weight 0.35s var(--ease);
+  animation: rise 1.2s var(--ease) both;
+  animation-delay: calc(var(--i) * 70ms + 900ms);
+}
+@keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
+
+/* Statement */
+.statement .inner { padding-block: 56px 72px; }
+.statement p.big {
+  margin: 0;
+  max-width: 22ch;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(28px, 4.1vw, 60px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.statement .big .w { transition: opacity 0.35s ease; }
+.statement .big .w.dim { opacity: 0.3; }
+.statement .cols { margin-top: 56px; }
+.statement .note { grid-column: 3; margin: 0; padding: 0 24px 0 16px; color: var(--on-cobalt-soft); }
+.statement .jump { grid-column: 4; padding-left: 16px; display: flex; flex-direction: column; gap: 6px; }
+.statement .jump a { text-decoration: none; }
+.statement .jump a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Stepped edges */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: clamp(72px, 12vw, 168px);
+  background: var(--stone);
+}
+.steps i { background: var(--cobalt); display: block; }
+.steps i:nth-child(1) { height: 0; }
+.steps i:nth-child(2) { height: 34%; }
+.steps i:nth-child(3) { height: 67%; }
+.steps i:nth-child(4) { height: 100%; }
+.steps.rev { background: var(--cobalt); }
+.steps.rev i { background: var(--stone); }
+.steps.rev i:nth-child(1) { height: 100%; }
+.steps.rev i:nth-child(2) { height: 67%; }
+.steps.rev i:nth-child(3) { height: 34%; }
+.steps.rev i:nth-child(4) { height: 0; }
+
+/* Big section words */
+.word {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(72px, 15vw, 248px);
+  line-height: 0.82;
+  letter-spacing: -0.05em;
+  color: var(--cobalt);
+  white-space: nowrap;
+}
+.word .ch { transition: font-weight 0.35s var(--ease); }
+
+/* Services */
+.services .inner { padding-block: 64px 96px; }
+.services .cols { margin-top: 56px; }
+.services .intro { grid-column: 1 / span 2; padding-right: 40px; }
+.services .intro .lead {
+  position: sticky;
+  top: 122px;
+  margin: 0;
+  max-width: 15ch;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(24px, 2.7vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -0.022em;
+  color: var(--cobalt);
+  text-wrap: balance;
+}
+.list { grid-column: 3 / span 2; padding-left: 16px; border-top: 1px solid var(--rule-stone); }
+details { border-bottom: 1px solid var(--rule-stone); }
+summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-block: 22px;
+  font-size: clamp(22px, 2.6vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -0.018em;
+  color: var(--cobalt);
+  transition: color 0.3s ease;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before {
+  content: "";
+  position: absolute;
+  inset: 0 -16px;
+  background: var(--cobalt);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.45s var(--ease);
+  z-index: -1;
+}
+summary:hover { color: var(--on-cobalt); }
+summary:hover::before { transform: scaleX(1); }
+summary .plus { position: relative; width: 20px; height: 20px; flex: none; margin-right: 4px; }
+summary .plus::before, summary .plus::after {
+  content: "";
+  position: absolute;
+  background: var(--cobalt);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s var(--ease), background 0.3s ease;
+}
+summary .plus::before { width: 20px; height: 1.5px; }
+summary .plus::after { width: 1.5px; height: 20px; }
+summary:hover .plus::before, summary:hover .plus::after { background: var(--on-cobalt); }
+details[open] summary .plus::before { transform: translate(-50%, -50%) rotate(45deg); }
+details[open] summary .plus::after { transform: translate(-50%, -50%) rotate(45deg); }
+.detail { display: flex; flex-direction: column; align-items: start; gap: 14px; padding: 2px 56px 30px 0; animation: open 0.5s var(--ease); }
+.detail p { margin: 0; max-width: 46ch; font-size: 17px; line-height: 1.5; }
+.detail .more { color: var(--cobalt); text-decoration: none; }
+@keyframes open { from { opacity: 0; transform: translateY(-8px); } }
+.detail .more:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Approach: a grid by default, a horizontal track once the script pins it */
+.approach { overflow: hidden; }
+.approach .inner { padding-block: 40px 72px; }
+.approach .word { color: var(--on-cobalt); }
+.approach .lede {
+  margin: 36px 0 0;
+  max-width: 24ch;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(26px, 3.4vw, 48px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+.track { list-style: none; padding: 0; margin: 56px 0 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--rule-cobalt); }
+.panel { min-width: 0; padding: 28px 40px 32px 0; display: grid; grid-template-columns: auto 1fr; gap: 8px 32px; align-items: end; }
+.panel .num {
+  grid-row: 1 / span 2;
+  font-family: var(--display);
+  font-weight: 200;
+  font-size: clamp(110px, 16vw, 300px);
+  line-height: 0.78;
+  letter-spacing: -0.07em;
+  color: transparent;
+  -webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.75);
+}
+.panel h3 { margin: 0; font-weight: 400; font-size: clamp(26px, 2.8vw, 44px); line-height: 1.05; letter-spacing: -0.02em; }
+.panel p { margin: 0; color: var(--on-cobalt-soft); max-width: 30ch; }
+.approach.is-h .track { display: flex; width: max-content; border-top: 0; }
+.approach.is-h .panel { width: min(64vw, 900px); flex: none; border-top: 1px solid var(--rule-cobalt); padding-right: 64px; }
+/* Progress along the Approach is a lane: dashes ahead, a solid line behind, a pair of tail lights at the front */
+.progress { --p: 0; position: relative; margin-top: 40px; height: 16px; background: repeating-linear-gradient(90deg, var(--rule-cobalt) 0 14px, transparent 14px 34px) 0 50% / 100% 2px no-repeat; }
+.progress i { position: absolute; left: 0; right: 0; top: 7px; height: 2px; background: var(--on-cobalt); transform: scaleX(var(--p)); transform-origin: 0 50%; }
+.progress b { position: absolute; top: 1px; left: calc(var(--p) * 100%); width: 6px; height: 6px; margin-left: -3px; border-radius: 50%; background: var(--signal); box-shadow: 0 8px 0 var(--signal), 0 0 12px 2px var(--signal), 0 8px 12px 2px var(--signal); }
+
+/* Work */
+.work .inner { padding-block: 64px 112px; }
+.features { margin-top: 56px; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--rule-stone); }
+.band.work::after { background: linear-gradient(var(--rule), var(--rule)) 50% 0 / 1px 100% no-repeat; }
+.feature { min-width: 0; padding: 28px 24px 40px 0; display: flex; flex-direction: column; gap: 14px; border-bottom: 1px solid var(--rule-stone); }
+.feature + .feature { padding: 28px 0 40px 24px; }
+.emblem {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  max-width: 100%;
+  background: var(--night);
+  overflow: hidden;
+  margin-bottom: 10px;
+  transition: transform 0.5s var(--ease);
+  transform-style: preserve-3d;
+}
+.emblem canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.emblem .tag { position: absolute; left: 14px; bottom: 12px; color: var(--on-cobalt-soft); }
+.emblem video { position: absolute; inset: 0; width: 100%; height: 100%; display: block; object-fit: cover; }
+.emblem.film .tag { left: auto; bottom: auto; right: 10px; top: 10px; padding: 3px 8px; background: var(--night); color: var(--on-cobalt); }
+.emblem.wide { background: #111318; }
+.emblem.wide video { object-fit: contain; }
+.feature h3 { margin: 0; font-weight: 400; font-size: clamp(34px, 4.4vw, 68px); line-height: 1; letter-spacing: -0.03em; color: var(--cobalt); }
+.feature h3 small { display: block; margin-top: 10px; font-size: 16px; letter-spacing: 0; color: var(--ink); opacity: 0.7; }
+.feature .meta { display: flex; flex-wrap: wrap; gap: 6px 22px; color: var(--cobalt); }
+.feature .text { margin: 0; max-width: 46ch; }
+.feature .text a { color: var(--cobalt); }
+.live { display: inline-flex; align-items: center; gap: 10px; }
+.live i { position: relative; width: 8px; height: 8px; border-radius: 50%; background: var(--signal); }
+.live i::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 1px solid var(--signal);
+  animation: ping 2.2s ease-out infinite;
+}
+@keyframes ping { from { transform: scale(0.5); opacity: 1; } to { transform: scale(1.8); opacity: 0; } }
+.row {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  border-bottom: 1px solid var(--rule-stone);
+  padding-block: 28px;
+}
+.row::before {
+  content: "";
+  position: absolute;
+  inset: -1px -16px 0;
+  background: var(--cobalt);
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+  transition: transform 0.45s var(--ease);
+  z-index: -1;
+}
+.row:hover::before { transform: scaleY(1); }
+.row > * { min-width: 0; }
+.row h3, .row small, .row .meta, .row .text, .row strong { transition: color 0.3s ease; }
+.row:hover h3, .row:hover small, .row:hover .meta, .row:hover .text, .row:hover strong { color: var(--on-cobalt); }
+.row h3 { margin: 0; font-weight: 400; font-size: clamp(26px, 3vw, 44px); line-height: 1.05; letter-spacing: -0.02em; color: var(--cobalt); padding-right: 24px; }
+.row h3 small { display: block; margin-top: 10px; font-size: 16px; letter-spacing: 0; color: var(--ink); opacity: 0.7; }
+.row .meta { padding: 6px 24px 0 16px; color: var(--cobalt); display: flex; flex-direction: column; gap: 4px; }
+.row .text { padding: 4px 0 0 16px; margin: 0; max-width: 40ch; }
+.row strong { font-weight: 500; color: var(--cobalt); }
+
+/* Contact */
+.contact .inner { padding-block: 72px 64px; }
+.contact .word { color: var(--on-cobalt); }
+/* The page ends where it began: the same motorway, this time with the camera climbing out */
+.contact.has-gl { background: var(--night); overflow: hidden; }
+.contact.has-gl::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg, rgba(6, 10, 46, 0.1) 0%, rgba(6, 10, 46, 0.5) 45%, rgba(6, 10, 46, 0.9) 100%); }
+.contact.has-gl .inner { min-height: calc(100vh - var(--hh)); min-height: calc(100svh - var(--hh)); display: flex; flex-direction: column; }
+.contact.has-gl .mailrow { margin-top: auto; }
+.mailrow {
+  margin-top: 48px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--rule-cobalt);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 16px 28px;
+}
+.mail {
+  margin: 0;
+  min-width: 0;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(30px, 8.2vw, 148px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+  overflow-wrap: anywhere;
+}
+.mail .value { text-decoration: none; }
+.mail .value:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
+.mailrow .copy { margin: 0; }
+.contact .cols { margin-top: 36px; row-gap: 32px; }
+.contact .ask { grid-column: 1 / span 2; margin: 0; padding-right: 40px; font-size: 22px; line-height: 1.35; max-width: 30ch; }
+.field { padding-left: 16px; display: flex; flex-direction: column; gap: 6px; }
+.field .label { color: var(--on-cobalt-soft); }
+.field .value { font-size: 18px; line-height: 1.4; user-select: all; }
+.field .value.nosel { user-select: text; }
+.field a { text-underline-offset: 3px; }
+.copy {
+  align-self: start;
+  margin-top: 4px;
+  background: transparent;
+  color: var(--on-cobalt);
+  border: 1px solid var(--rule-cobalt);
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: border-color 0.25s ease, transform 0.3s var(--ease);
+}
+.copy:hover { border-color: var(--on-cobalt); }
+.f-phone { grid-column: 3; }
+.f-addr { grid-column: 4; }
+.f-link { grid-column: 3; }
+
+/* Footer */
+.foot .inner { padding-block: 22px; display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; color: var(--cobalt); }
+.foot nav { display: flex; gap: 24px; }
+.foot a { text-decoration: none; }
+.foot a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+@media (hover: none), (pointer: coarse) {
+  .cursor { display: none; }
+  .row::before, summary::before { display: none; }
+  .row:hover h3, .row:hover .meta, .row:hover strong { color: var(--cobalt); }
+  .row:hover small, .row:hover .text { color: var(--ink); }
+  summary:hover { color: var(--cobalt); }
+  summary:hover .plus::before, summary:hover .plus::after { background: var(--cobalt); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pre, .cursor { display: none; }
+  body::after { animation: none; }
+  .title .ch, .live i::after, .detail { animation: none; }
+}
+@media (pointer: coarse) {
+  body::after { animation: none; }
+}
+
+/* Narrow screens */
+@media (max-width: 900px) {
+  .band::after { background: linear-gradient(var(--rule), var(--rule)) 50% 0 / 1px 100% no-repeat; }
+  .band.services::after, .band.work::after { background: none; }
+  .nav:not(.nav-b), .nav-b .links { display: none; }
+  .bar .cols { grid-template-columns: 1fr auto; align-items: center; }
+  .nav-b { grid-column: 2; padding-left: 0; }
+  .brand { grid-column: 1; }
+  .tagline { grid-column: 1 / -1; padding-left: 0; max-width: 24ch; font-size: 20px; }
+  .hero .inner { min-height: clamp(480px, 78vh, 680px); }
+  .hud { grid-template-columns: 1fr auto; }
+  .hud .c3 { display: none; }
+  .hud .c4 { grid-column: 2; }
+  .statement .cols, .services .cols, .contact .cols { grid-template-columns: 1fr 1fr; }
+  .statement .note { grid-column: 1; padding-left: 0; }
+  .statement .jump { grid-column: 2; }
+  .services .intro { grid-column: 1 / -1; padding-right: 0; margin-bottom: 32px; }
+  .services .intro .lead { position: static; max-width: 20ch; }
+  .list { grid-column: 1 / -1; padding-left: 0; }
+  .detail { padding-right: 0; }
+  .track { grid-template-columns: 1fr; }
+  .panel { padding-right: 0; border-bottom: 1px solid var(--rule-cobalt); }
+  .progress { display: none; }
+  .contact.has-gl .inner { min-height: 0; }
+  .contact.has-gl .mailrow { margin-top: 48px; }
+  .features { grid-template-columns: 1fr; }
+  .feature, .feature + .feature { padding: 28px 0 36px; }
+  .row { grid-template-columns: 1fr 1fr; row-gap: 14px; }
+  .row h3 { grid-column: 1 / -1; }
+  .row .meta { padding-left: 0; }
+  .contact .ask { grid-column: 1 / -1; padding-right: 0; }
+  .f-phone, .f-link { grid-column: 1; padding-left: 0; }
+  .f-addr { grid-column: 2; }
+}
+@media (max-width: 520px) {
+  .band::after, .band.work::after { background: none; }
+  .statement .cols, .contact .cols, .row { grid-template-columns: 1fr; }
+  .statement .jump, .f-phone, .f-link, .f-addr { grid-column: 1; padding-left: 0; }
+  .statement .cols { row-gap: 28px; }
+  .row .text { padding-left: 0; }
+  .panel { grid-template-columns: 1fr; }
+  .panel .num { grid-row: auto; font-size: 120px; }
+  .field .value { font-size: 17px; overflow-wrap: anywhere; }
+  .brand .mono { font-size: 11px; }
+  .btn { padding: 10px 12px; }
+}
+</style>
+</head>
+<body>
+
+<div class="pre" aria-hidden="true">
+  <div class="pre-in">
+    <svg viewBox="0 0 44 56" fill="none">
+      <path d="M22 6 A20 20 0 0 0 22 50" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M22 6 A20 20 0 0 1 22 50" stroke="#fff" stroke-width="2.2" stroke-linecap="round" opacity=".7"/>
+      <circle class="dot" cx="5" cy="28" r="2" fill="#fff"/>
+      <circle class="dot" cx="39" cy="28" r="2" fill="#ff8a3d"/>
+      <circle class="dot" cx="22" cy="28" r="3" fill="#fff"/>
+    </svg>
+    <span class="count">000</span>
+  </div>
+</div>
+<div class="cursor" aria-hidden="true"></div>
+<a class="skip mono" href="#about">Skip to content</a>
+
+<header class="bar">
+  <div class="wrap cols">
+    <a class="brand" href="#top" aria-label="Olaris Consulting, back to top">
+      <svg viewBox="0 0 44 56" fill="none" aria-hidden="true">
+        <path d="M22 6 A20 20 0 0 0 22 50" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        <path d="M22 6 A20 20 0 0 1 22 50" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+        <circle cx="5" cy="28" r="2" fill="#fff"/>
+        <circle cx="39" cy="28" r="2" fill="#fff"/>
+        <circle cx="22" cy="6" r="2.5" fill="#fff"/>
+        <circle cx="22" cy="50" r="2.5" fill="#fff"/>
+        <circle cx="22" cy="28" r="3" fill="#fff"/>
+      </svg>
+      <span class="mono">Olaris Consulting Ltd.</span>
+    </a>
+    <nav class="nav mono" aria-label="Sections">
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#work">Work</a>
+    </nav>
+    <div class="nav nav-b mono">
+      <div class="links">
+        <a href="https://orbisio.co.uk" target="_blank" rel="noopener">Orbis IO ↗</a>
+        <a href="https://linkedin.com/company/olaris-consulting-limited" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <a class="btn mono magnet" href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="band hero" aria-label="Introduction">
+    <canvas id="gl" aria-hidden="true"></canvas>
+    <div class="wash" aria-hidden="true"></div>
+    <div class="wrap inner">
+      <div class="cols fade">
+        <p class="tagline">Products, strategy and automation for UK vehicle leasing and fleet.</p>
+      </div>
+      <div>
+        <div class="cols mono hud fade">
+          <span>Consulting Ltd.</span>
+          <span class="c3">Designed and engineered in-house</span>
+          <span class="c4">Oxfordshire, UK</span>
+        </div>
+        <h1 class="title weighty" aria-label="Olaris"><span class="ch" style="--i:0" aria-hidden="true">O</span><span class="ch" style="--i:1" aria-hidden="true">l</span><span class="ch" style="--i:2" aria-hidden="true">a</span><span class="ch" style="--i:3" aria-hidden="true">r</span><span class="ch" style="--i:4" aria-hidden="true">i</span><span class="ch" style="--i:5" aria-hidden="true">s</span></h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="band cobalt statement" id="about" aria-label="About">
+    <div class="wrap inner">
+      <p class="big">Olaris builds and launches products for UK vehicle leasing and fleet, and advises the businesses that run them. Orbis IO and Perx, both built with Covase, are Olaris projects.</p>
+      <div class="cols">
+        <p class="mono note">Founded by Alan Carreras. 40 years in UK vehicle leasing and fleet.</p>
+        <nav class="mono jump" aria-label="On this page">
+          <a href="#services">Services →</a>
+          <a href="#work">Work →</a>
+          <a href="#contact">Contact →</a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <div class="steps" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+  <section class="band stone services" id="services" aria-labelledby="services-h">
+    <div class="wrap inner">
+      <h2 class="word" id="services-h">Services</h2>
+      <div class="cols">
+        <div class="intro">
+          <p class="lead">Five services, each one proven on a live business first.</p>
+        </div>
+        <div class="list">
+          <details name="svc" open>
+            <summary>Product design and launch<span class="plus" aria-hidden="true"></span></summary>
+            <div class="detail">
+              <p>From gap in the market to live product: scope, build, pricing, funding and launch partners. Orbis IO and Perx are the two most recent.</p><a class="more mono" href="#contact">[ Talk about this → ]</a>
+            </div>
+          </details>
+          <details name="svc">
+            <summary>Leasing and broker strategy<span class="plus" aria-hidden="true"></span></summary>
+            <div class="detail">
+              <p>Funder panels, product mix, mileage and end of contract margin, and where to compete next.</p><a class="more mono" href="#contact">[ Talk about this → ]</a>
+            </div>
+          </details>
+          <details name="svc">
+            <summary>Acquisitions and integration<span class="plus" aria-hidden="true"></span></summary>
+            <div class="detail">
+              <p>Target search, valuation and deal terms, then bringing books, people and systems together. 18 acquisitions led at Bridle Group.</p><a class="more mono" href="#contact">[ Talk about this → ]</a>
+            </div>
+          </details>
+          <details name="svc">
+            <summary>Connected vehicle data<span class="plus" aria-hidden="true"></span></summary>
+            <div class="detail">
+              <p>Compliance, cost control and real world emissions from manufacturer data, with no telematics boxes to fit.</p><a class="more mono" href="#contact">[ Talk about this → ]</a>
+            </div>
+          </details>
+          <details name="svc">
+            <summary>AI and automation<span class="plus" aria-hidden="true"></span></summary>
+            <div class="detail">
+              <p>Automating the routine work: licence checks, quotes, mileage tracking and reporting. Start small, prove it, then widen it.</p><a class="more mono" href="#contact">[ Talk about this → ]</a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="steps rev" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+  <section class="band cobalt approach" id="approach" aria-labelledby="approach-h">
+    <div class="wrap inner">
+      <h2 class="word" id="approach-h">Approach</h2>
+      <p class="lede">Every Olaris product follows the same path.</p>
+      <ol class="track" role="list">
+        <li class="panel"><span class="num" aria-hidden="true">01</span><h3>Find the gap</h3><p>Where a leasing or fleet business loses money, time or customers today.</p></li>
+        <li class="panel"><span class="num" aria-hidden="true">02</span><h3>Design it</h3><p>What it does, who it is for, and how it is priced, funded and sold.</p></li>
+        <li class="panel"><span class="num" aria-hidden="true">03</span><h3>Build it</h3><p>Engineered in-house, then tested and approved before release.</p></li>
+        <li class="panel"><span class="num" aria-hidden="true">04</span><h3>Launch and run</h3><p>Live with a partner, then measured and improved.</p></li>
+      </ol>
+      <div class="progress" aria-hidden="true"><i></i><b></b></div>
+    </div>
+  </section>
+
+  <div class="steps" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+  <section class="band stone work" id="work" aria-labelledby="work-h">
+    <div class="wrap inner">
+      <h2 class="word" id="work-h">Work</h2>
+      <div class="features">
+        <article class="feature">
+          <div class="emblem film wide"><video class="film-v" src="orbis-film.mp4" poster="orbis-poster.jpg" muted loop playsinline preload="metadata" aria-label="The Orbis IO product walkthrough on a demo fleet: fleet overview, live vehicle data, exception alerts, licence checks, audit trail and carbon reporting"></video><span class="mono tag">Walkthrough, demo fleet</span></div>
+          <h3>Orbis IO<small>Co-founded with Covase</small></h3>
+          <div class="meta mono"><span class="live"><i aria-hidden="true"></i>Live</span><span>Launched April 2026</span><span>Fleet intelligence</span></div>
+          <p class="text">Fleet intelligence and compliance from the data vehicles already send. Orbis measures, Covase runs. <a href="https://orbisio.co.uk" target="_blank" rel="noopener">orbisio.co.uk ↗</a></p>
+        </article>
+        <article class="feature">
+          <div class="emblem film"><video class="film-v" src="perx-film.mp4" poster="perx-poster.jpg" muted loop playsinline preload="metadata" aria-label="The Perx film: an example quote for an electric car, then the form an employee fills in"></video><span class="mono tag">Perx film</span></div>
+          <h3>Perx<small>Created for Covase</small></h3>
+          <div class="meta mono"><span class="live"><i aria-hidden="true"></i>Live</span><span>Cars, new and pre-loved</span><span>Home energy</span><span>Motor insurance</span></div>
+          <p class="text">Salary sacrifice for electric cars, solar panels, home batteries and chargers. Pre-loved cars and Beloy motor insurance are quoted, bought and managed inside Perx.</p>
+        </article>
+      </div>
+      <article class="row">
+        <h3>Alan Carreras<small>Founder</small></h3>
+        <div class="meta mono"><span>Former Chair</span><span>BVRLA Leasing Broker Committee</span><span>2019 to 2021</span></div>
+        <p class="text">Alan spent 12 years at <strong>Bridle Group</strong>, now Jurni Leasing, as it grew to more than 37,000 vehicles. He has sat on <strong>FLA</strong> committees and is co-founder and CTO of <strong>Orbis IO</strong>.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band cobalt contact" id="contact" aria-labelledby="contact-h">
+    <div class="wrap inner">
+      <h2 class="word weighty" id="contact-h" aria-label="Contact"><span class="ch" aria-hidden="true">C</span><span class="ch" aria-hidden="true">o</span><span class="ch" aria-hidden="true">n</span><span class="ch" aria-hidden="true">t</span><span class="ch" aria-hidden="true">a</span><span class="ch" aria-hidden="true">c</span><span class="ch" aria-hidden="true">t</span></h2>
+      <div class="mailrow">
+        <p class="mail"><a class="value" id="email" href="mailto:alan@olaris.co.uk">alan@olaris.co.uk</a></p>
+        <button class="copy mono magnet" type="button" id="copy-email">Copy email</button>
+      </div>
+      <div class="cols">
+        <p class="ask">Tell Alan what you're working on. If Olaris isn't the right fit, he'll say so.</p>
+        <div class="field f-phone">
+          <span class="mono label">Phone</span>
+          <span class="value nosel"><a href="tel:+447919354068">+44 7919 354 068</a></span>
+        </div>
+        <div class="field f-addr">
+          <span class="mono label">Office</span>
+          <span class="value nosel">10 Bull Street, Aston,<br>Nr Bampton, OX18 2DN</span>
+        </div>
+        <div class="field f-link">
+          <span class="mono label">LinkedIn</span>
+          <span class="value nosel"><a href="https://linkedin.com/company/olaris-consulting-limited" target="_blank" rel="noopener">Olaris Consulting ↗</a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="band stone foot">
+  <div class="wrap inner mono">
+    <span>© 2026 Olaris Consulting Limited</span>
+    <nav aria-label="Legal">
+      <a href="https://olaris.co.uk/privacy-policy" target="_blank" rel="noopener">Privacy ↗</a>
+      <a href="https://olaris.co.uk/terms" target="_blank" rel="noopener">Terms ↗</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+(function () {
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  var bar = document.querySelector(".bar");
+  var setHH = function () { document.documentElement.style.setProperty("--hh", bar.offsetHeight + "px"); };
+  setHH();
+  window.addEventListener("resize", setHH);
+  var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
+
+  /* Intro screen: counter to 100, then the curtain lifts */
+  var pre = document.querySelector(".pre");
+  if (pre) {
+    if (reduce) { pre.parentNode.removeChild(pre); }
+    else {
+      var countEl = pre.querySelector(".count"), t0 = performance.now();
+      var countUp = function (now) {
+        var k = clamp((now - t0) / 800, 0, 1);
+        countEl.textContent = ("00" + Math.round(k * 100)).slice(-3);
+        if (k < 1) requestAnimationFrame(countUp);
+        else { pre.classList.add("done"); setTimeout(function () { if (pre.parentNode) pre.parentNode.removeChild(pre); }, 1000); }
+      };
+      requestAnimationFrame(countUp);
+    }
+  }
+
+  /* Copy email */
+  var btn = document.getElementById("copy-email");
+  var email = document.getElementById("email");
+  btn.addEventListener("click", function () {
+    var done = function () { btn.textContent = "Copied"; setTimeout(function () { btn.textContent = "Copy email"; }, 1800); };
+    var fallback = function () {
+      var r = document.createRange(); r.selectNodeContents(email);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = "Selected, press copy";
+    };
+    try { navigator.clipboard.writeText(email.textContent.trim()).then(done, fallback); } catch (e) { fallback(); }
+  });
+
+  /* Pointer: follower dot, magnetic buttons, letters that gain weight near the cursor */
+  var px = -999, py = -999;
+  window.addEventListener("pointermove", function (e) { px = e.clientX; py = e.clientY; }, { passive: true });
+  if (finePointer && !reduce) {
+    var cur = document.querySelector(".cursor"), cx = -100, cy = -100;
+    var follow = function () {
+      cx += (px - cx) * 0.22; cy += (py - cy) * 0.22;
+      cur.style.transform = "translate3d(" + cx + "px," + cy + "px,0)";
+      requestAnimationFrame(follow);
+    };
+    requestAnimationFrame(follow);
+    var hot = "a, button, summary, .emblem";
+    document.addEventListener("pointerover", function (e) { if (e.target.closest && e.target.closest(hot)) cur.classList.add("big"); });
+    document.addEventListener("pointerout", function (e) { if (e.target.closest && e.target.closest(hot)) cur.classList.remove("big"); });
+
+    Array.prototype.forEach.call(document.querySelectorAll(".magnet"), function (b) {
+      b.addEventListener("pointermove", function (e) {
+        var r = b.getBoundingClientRect();
+        b.style.transform = "translate(" + ((e.clientX - r.left - r.width / 2) * 0.3) + "px," + ((e.clientY - r.top - r.height / 2) * 0.4) + "px)";
+      });
+      b.addEventListener("pointerleave", function () { b.style.transform = ""; });
+    });
+
+    /* Each letter keeps the width it has at rest, so a heavier letter grows in place and nothing beside it moves */
+    var weighty = Array.prototype.slice.call(document.querySelectorAll(".weighty .ch"));
+    var locked = false, lockTimer = null;
+    var lockWidths = function () {
+      locked = false;
+      weighty.forEach(function (c) { c.style.width = ""; c.style.fontWeight = ""; });
+      clearTimeout(lockTimer);
+      lockTimer = setTimeout(function () {
+        var ws = weighty.map(function (c) { return c.offsetWidth; });
+        weighty.forEach(function (c, i) { c.style.width = ws[i] + "px"; });
+        locked = true;
+      }, 450);
+    };
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(lockWidths); else lockWidths();
+    window.addEventListener("resize", lockWidths);
+    var wpx = 0, wpy = 0, wsy = -1;
+    var weigh = function () {
+      requestAnimationFrame(weigh);
+      if (!locked || (px === wpx && py === wpy && window.scrollY === wsy)) return;
+      wpx = px; wpy = py; wsy = window.scrollY;
+      for (var i = 0; i < weighty.length; i++) {
+        var r = weighty[i].getBoundingClientRect();
+        if (r.bottom < 0 || r.top > window.innerHeight) continue;
+        var dx = px - (r.left + r.width / 2), dy = py - (r.top + r.height / 2);
+        var k = clamp(1 - Math.sqrt(dx * dx + dy * dy) / Math.max(260, r.height * 1.1), 0, 1);
+        weighty[i].style.fontWeight = Math.round(300 + 230 * k * k);
+      }
+    };
+    requestAnimationFrame(weigh);
+
+    Array.prototype.forEach.call(document.querySelectorAll(".emblem"), function (el) {
+      el.addEventListener("pointermove", function (e) {
+        var r = el.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+        el.style.transform = "perspective(900px) rotateY(" + (x * 9) + "deg) rotateX(" + (-y * 9) + "deg) scale(1.02)";
+      });
+      el.addEventListener("pointerleave", function () { el.style.transform = ""; });
+    });
+  }
+
+  /* Statement lights up word by word as it scrolls into view */
+  var big = document.querySelector(".statement .big");
+  if (big && !reduce) {
+    var words = big.textContent.trim().split(/\s+/);
+    big.innerHTML = words.map(function (w) { return '<span class="w">' + w + "</span>"; }).join(" ");
+    var spans = big.querySelectorAll(".w"), ticking = false;
+    var reveal = function () {
+      ticking = false;
+      var r = big.getBoundingClientRect(), vh = window.innerHeight;
+      var p = clamp((vh * 0.92 - r.top) / (r.height + vh * 0.3), 0, 1);
+      var lit = Math.round(p * spans.length);
+      for (var i = 0; i < spans.length; i++) spans[i].classList.toggle("dim", i >= lit);
+    };
+    window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(reveal); } }, { passive: true });
+    window.addEventListener("resize", reveal);
+    reveal();
+  }
+
+  /* Emblems: Orbis as a fleet in orbit, Perx as energy flowing from sun to home to car */
+  var emblems = Array.prototype.map.call(document.querySelectorAll(".emblem[data-emblem]"), function (el) {
+    var c = el.querySelector("canvas");
+    return { el: el, c: c, ctx: c.getContext("2d"), kind: el.getAttribute("data-emblem"), on: true, w: 0, h: 0 };
+  });
+  var sizeEmblem = function (m) {
+    var r = m.c.getBoundingClientRect(), d = Math.min(window.devicePixelRatio || 1, 2);
+    m.w = r.width; m.h = r.height;
+    m.c.width = Math.round(r.width * d); m.c.height = Math.round(r.height * d);
+    m.ctx.setTransform(d, 0, 0, d, 0, 0);
+  };
+  var drawOrbit = function (m, t) {
+    var g = m.ctx, w = m.w, h = m.h, cx = w / 2, cy = h / 2;
+    g.clearRect(0, 0, w, h);
+    var bg = g.createRadialGradient(cx, cy, 0, cx, cy, w * 0.7);
+    bg.addColorStop(0, "#1b2690"); bg.addColorStop(1, "#060a2e");
+    g.fillStyle = bg; g.fillRect(0, 0, w, h);
+    g.save(); g.translate(cx, cy); g.rotate(-0.2);
+    for (var k = 0; k < 5; k++) {
+      var rx = w * (0.1 + k * 0.085), ry = rx * 0.36;
+      g.strokeStyle = "rgba(255,255,255," + (0.28 - k * 0.04) + ")"; g.lineWidth = 1;
+      g.beginPath(); g.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2); g.stroke();
+      var n = 3 + k * 2;
+      for (var j = 0; j < n; j++) {
+        var a = j / n * Math.PI * 2 + t * (0.5 / (k + 1)) * (k % 2 ? -1 : 1);
+        var x = Math.cos(a) * rx, y = Math.sin(a) * ry;
+        var alert = (j * 7 + k * 3) % 11 === 0;
+        g.fillStyle = alert ? "#ff8a3d" : "#ffffff";
+        g.shadowColor = alert ? "#ff8a3d" : "rgba(255,255,255,0.8)"; g.shadowBlur = 10;
+        g.beginPath(); g.arc(x, y, alert ? 3.2 : 2.2, 0, Math.PI * 2); g.fill();
+      }
+    }
+    g.shadowBlur = 0;
+    var pulse = 1 + 0.25 * Math.sin(t * 2);
+    g.fillStyle = "#ffffff"; g.beginPath(); g.arc(0, 0, 5, 0, Math.PI * 2); g.fill();
+    g.strokeStyle = "rgba(255,255,255,0.5)"; g.beginPath(); g.arc(0, 0, 12 * pulse, 0, Math.PI * 2); g.stroke();
+    g.restore();
+  };
+  var bez = function (p0, p1, p2, s) {
+    var u = 1 - s;
+    return [u * u * p0[0] + 2 * u * s * p1[0] + s * s * p2[0], u * u * p0[1] + 2 * u * s * p1[1] + s * s * p2[1]];
+  };
+  var drawEnergy = function (m, t) {
+    var g = m.ctx, w = m.w, h = m.h;
+    g.clearRect(0, 0, w, h);
+    var bg = g.createLinearGradient(0, 0, 0, h);
+    bg.addColorStop(0, "#0d1560"); bg.addColorStop(1, "#060a2e");
+    g.fillStyle = bg; g.fillRect(0, 0, w, h);
+    var s = Math.min(w, h);
+    var sun = [w * 0.2, h * 0.3], home = [w * 0.52, h * 0.6], car = [w * 0.8, h * 0.66];
+    g.save(); g.translate(sun[0], sun[1]); g.rotate(t * 0.25);
+    g.strokeStyle = "rgba(255,138,61,0.85)"; g.lineWidth = 1.5;
+    for (var i = 0; i < 12; i++) {
+      var a = i / 12 * Math.PI * 2;
+      g.beginPath(); g.moveTo(Math.cos(a) * s * 0.075, Math.sin(a) * s * 0.075); g.lineTo(Math.cos(a) * s * 0.11, Math.sin(a) * s * 0.11); g.stroke();
+    }
+    g.restore();
+    g.fillStyle = "#ff8a3d"; g.shadowColor = "#ff8a3d"; g.shadowBlur = 24;
+    g.beginPath(); g.arc(sun[0], sun[1], s * 0.055, 0, Math.PI * 2); g.fill(); g.shadowBlur = 0;
+    var hw = s * 0.2, hh = s * 0.15;
+    g.strokeStyle = "rgba(255,255,255,0.85)"; g.lineWidth = 1.5;
+    g.beginPath();
+    g.moveTo(home[0] - hw / 2, home[1] + hh / 2); g.lineTo(home[0] - hw / 2, home[1] - hh / 6);
+    g.lineTo(home[0], home[1] - hh / 1.4); g.lineTo(home[0] + hw / 2, home[1] - hh / 6);
+    g.lineTo(home[0] + hw / 2, home[1] + hh / 2); g.closePath(); g.stroke();
+    g.strokeRect(home[0] - hw * 0.12, home[1] + hh * 0.02, hw * 0.24, hh * 0.3);
+    var cw = s * 0.24, ch = s * 0.06, cb = car[1];
+    g.beginPath();
+    g.moveTo(car[0] - cw / 2, cb); g.lineTo(car[0] - cw / 2, cb - ch);
+    g.lineTo(car[0] - cw * 0.22, cb - ch); g.lineTo(car[0] - cw * 0.08, cb - ch * 1.9);
+    g.lineTo(car[0] + cw * 0.2, cb - ch * 1.9); g.lineTo(car[0] + cw * 0.34, cb - ch);
+    g.lineTo(car[0] + cw / 2, cb - ch); g.lineTo(car[0] + cw / 2, cb); g.stroke();
+    g.beginPath(); g.arc(car[0] - cw * 0.28, cb, ch * 0.45, 0, Math.PI * 2); g.stroke();
+    g.beginPath(); g.arc(car[0] + cw * 0.28, cb, ch * 0.45, 0, Math.PI * 2); g.stroke();
+    var paths = [
+      [[sun[0] + s * 0.06, sun[1] + s * 0.03], [home[0] - s * 0.06, sun[1] - s * 0.02], [home[0], home[1] - hh / 1.4 - 4]],
+      [[home[0] + hw / 2, home[1] + hh * 0.2], [home[0] + hw * 0.9, home[1] + hh * 1.1], [car[0] - cw * 0.3, cb - ch * 1.2]]
+    ];
+    paths.forEach(function (p, pi) {
+      g.strokeStyle = "rgba(255,255,255,0.14)"; g.setLineDash([3, 5]);
+      g.beginPath(); g.moveTo(p[0][0], p[0][1]); g.quadraticCurveTo(p[1][0], p[1][1], p[2][0], p[2][1]); g.stroke();
+      g.setLineDash([]);
+      for (var q = 0; q < 7; q++) {
+        var st = ((t * 0.35 + q / 7 + pi * 0.5) % 1);
+        var pt = bez(p[0], p[1], p[2], st);
+        g.fillStyle = "rgba(255,138,61," + (0.35 + 0.65 * Math.sin(st * Math.PI)) + ")";
+        g.shadowColor = "#ff8a3d"; g.shadowBlur = 12;
+        g.beginPath(); g.arc(pt[0], pt[1], 2.6, 0, Math.PI * 2); g.fill();
+      }
+      g.shadowBlur = 0;
+    });
+  };
+  emblems.forEach(sizeEmblem);
+  window.addEventListener("resize", function () { emblems.forEach(sizeEmblem); });
+  var drawEmblems = function (t) {
+    emblems.forEach(function (m) {
+      if (!m.on) return;
+      if (m.kind === "orbit") drawOrbit(m, t); else drawEnergy(m, t);
+    });
+  };
+  if ("IntersectionObserver" in window) {
+    var eio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { emblems.forEach(function (m) { if (m.el === en.target) m.on = en.isIntersecting; }); });
+    });
+    emblems.forEach(function (m) { eio.observe(m.el); });
+  }
+  /* The product films play only while they are on screen, and not at all for people who ask for less motion */
+  if (!reduce && "IntersectionObserver" in window) {
+    var fio = new IntersectionObserver(function (en) {
+      en.forEach(function (x) {
+        if (x.isIntersecting) { var pl = x.target.play(); if (pl && pl.catch) pl.catch(function () {}); }
+        else x.target.pause();
+      });
+    }, { threshold: 0.35 });
+    Array.prototype.forEach.call(document.querySelectorAll("video.film-v"), function (f) { fio.observe(f); });
+  }
+  if (reduce) { drawEmblems(2); }
+  else {
+    var emblemLoop = function (now) { drawEmblems(now / 1000); requestAnimationFrame(emblemLoop); };
+    requestAnimationFrame(emblemLoop);
+  }
+
+  /* Hero: a UK motorway at night in WebGL. Our carriageway is on the left, so tail lights pull away on the left
+     and headlights come towards you on the right. Scrolling lowers the camera from the air to a bridge. */
+  var hero = document.querySelector(".hero");
+  /* The hero scroll has three beats: dive (first 68%), a low level cruise, then the view washes to cobalt and becomes the next section */
+  var heroP = 0, DIVE = 0.68, glMode = "hero", endP = 0;
+  var wash = document.querySelector(".hero .wash");
+  var contactEl = document.querySelector(".contact");
+  var fades = document.querySelectorAll(".hero .fade");
+  var titleEl = document.querySelector(".hero .title");
+  var applyHero = function () {
+    var e = clamp(heroP / DIVE, 0, 1);
+    wash.style.opacity = String(clamp((heroP - 0.86) / 0.14, 0, 1));
+    for (var i = 0; i < fades.length; i++) fades[i].style.opacity = String(clamp(1 - e * 2.2, 0, 1));
+    titleEl.style.transform = "translateY(" + (-e * 10) + "vh) scale(" + (1 + e * 0.1) + ")";
+    titleEl.style.opacity = String(clamp(1 - Math.max(0, e - 0.55) * 2.4, 0, 1));
+  };
+
+  var gl = (function initGL() {
+    if (!window.THREE) return null;
+    var canvas = document.getElementById("gl");
+    var renderer;
+    try { renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, powerPreference: "high-performance" }); }
+    catch (err) { return null; }
+    var mobile = window.innerWidth < 700;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, mobile ? 1.5 : 2));
+    var scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x05082a);
+    scene.fog = new THREE.FogExp2(0x141d7a, 0.00085);
+    var camera = new THREE.PerspectiveCamera(52, 1, 0.5, 5000);
+
+    /* The road: a huge closed loop, so the camera can drive for ever */
+    var ctrl = [], n = 16, R0 = 2600, i;
+    for (i = 0; i < n; i++) {
+      var a = i / n * Math.PI * 2;
+      var wob = 1 + 0.1 * Math.sin(a * 3 + 1.3) + 0.05 * Math.sin(a * 5 + 0.4);
+      ctrl.push(new THREE.Vector3(Math.cos(a) * R0 * wob, 0, Math.sin(a) * R0 * 0.72 * wob));
+    }
+    var curve = new THREE.CatmullRomCurve3(ctrl, true, "centripetal");
+    var L = curve.getLength();
+    var N = 8000;
+    var P = curve.getSpacedPoints(N);
+    var RX = new Float32Array(N), RZ = new Float32Array(N);
+    for (i = 0; i < N; i++) {
+      var ax = P[(i + 1) % N].x - P[i].x, az = P[(i + 1) % N].z - P[i].z;
+      var len = Math.sqrt(ax * ax + az * az) || 1;
+      RX[i] = -az / len; RZ[i] = ax / len;
+    }
+    var at = function (u, off, out) {
+      u = ((u % 1) + 1) % 1;
+      var f = u * N, i0 = Math.floor(f) % N, k = f - Math.floor(f), i1 = (i0 + 1) % N;
+      out.x = P[i0].x + (P[i1].x - P[i0].x) * k + RX[i0] * off;
+      out.z = P[i0].z + (P[i1].z - P[i0].z) * k + RZ[i0] * off;
+      return out;
+    };
+    var RES = 1.2, LANE = 3.7, EDGE = RES + 3 * LANE, VERGE = EDGE + 3.3;
+    var laneOff = function (side, lane) { return side * (RES + LANE * (lane + 0.5)); };
+    var v = { x: 0, z: 0 }, v2 = { x: 0, z: 0 };
+
+    /* Sky dome that follows the camera: dark above, glowing at the horizon */
+    var domeGeo = new THREE.SphereGeometry(3800, 32, 72);
+    var dc = [], dpos = domeGeo.attributes.position;
+    var top = new THREE.Color(0x02031a), hor = new THREE.Color(0x2a3bcc), low = new THREE.Color(0x060a30), tmpc = new THREE.Color();
+    for (i = 0; i < dpos.count; i++) {
+      var yy = dpos.getY(i) / 3800;
+      if (yy >= 0) tmpc.copy(hor).lerp(top, clamp(Math.pow(yy * 2.6, 0.55), 0, 1));
+      else tmpc.copy(hor).lerp(low, clamp(Math.pow(-yy * 6, 0.5), 0, 1));
+      dc.push(tmpc.r, tmpc.g, tmpc.b);
+    }
+    domeGeo.setAttribute("color", new THREE.Float32BufferAttribute(dc, 3));
+    var dome = new THREE.Mesh(domeGeo, new THREE.MeshBasicMaterial({ vertexColors: true, side: THREE.BackSide, fog: false, depthWrite: false }));
+    dome.renderOrder = -1;
+    scene.add(dome);
+
+    /* Ground grid, a blueprint under the night */
+    var gp = [], G = 4200, step = 60;
+    for (var gx = -G; gx <= G; gx += step) { gp.push(gx, -0.05, -G, gx, -0.05, G, -G, -0.05, gx, G, -0.05, gx); }
+    var gridGeo = new THREE.BufferGeometry();
+    gridGeo.setAttribute("position", new THREE.Float32BufferAttribute(gp, 3));
+    scene.add(new THREE.LineSegments(gridGeo, new THREE.LineBasicMaterial({ color: 0x3b4fe0, transparent: true, opacity: 0.22 })));
+
+    /* Road surface */
+    var rp = [], ri = [];
+    for (i = 0; i <= N; i++) {
+      var ii = i % N;
+      rp.push(P[ii].x - RX[ii] * VERGE, 0, P[ii].z - RZ[ii] * VERGE, P[ii].x + RX[ii] * VERGE, 0, P[ii].z + RZ[ii] * VERGE);
+      if (i < N) { var b0 = i * 2; ri.push(b0, b0 + 1, b0 + 2, b0 + 1, b0 + 3, b0 + 2); }
+    }
+    var roadGeo = new THREE.BufferGeometry();
+    roadGeo.setAttribute("position", new THREE.Float32BufferAttribute(rp, 3));
+    roadGeo.setIndex(ri);
+    scene.add(new THREE.Mesh(roadGeo, new THREE.MeshBasicMaterial({ color: 0x070b38, side: THREE.DoubleSide })));
+
+    /* Markings: solid edges and central reservation, 2 m dashes every 9 m between lanes */
+    var mp = [];
+    var stepU = 9 / L;
+    [-EDGE, -RES, RES, EDGE].forEach(function (off) {
+      for (var u = 0; u < 1; u += 6 / L) { at(u, off, v); at(u + 6 / L, off, v2); mp.push(v.x, 0.03, v.z, v2.x, 0.03, v2.z); }
+    });
+    [-(RES + LANE), -(RES + 2 * LANE), RES + LANE, RES + 2 * LANE].forEach(function (off) {
+      for (var u = 0; u < 1; u += stepU) { at(u, off, v); at(u + 2 / L, off, v2); mp.push(v.x, 0.03, v.z, v2.x, 0.03, v2.z); }
+    });
+    var markGeo = new THREE.BufferGeometry();
+    markGeo.setAttribute("position", new THREE.Float32BufferAttribute(mp, 3));
+    var lineMat = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.32 });
+    scene.add(new THREE.LineSegments(markGeo, lineMat));
+
+    /* The same markings as paint with real width. They fade in as the camera comes down, when hairlines stop being enough */
+    var qp = [], qi = [];
+    var quad = function (u1, u2, off, hw) {
+      var b = qp.length / 3;
+      at(u1, off - hw, v); qp.push(v.x, 0.02, v.z);
+      at(u1, off + hw, v); qp.push(v.x, 0.02, v.z);
+      at(u2, off - hw, v); qp.push(v.x, 0.02, v.z);
+      at(u2, off + hw, v); qp.push(v.x, 0.02, v.z);
+      qi.push(b, b + 1, b + 2, b + 1, b + 3, b + 2);
+    };
+    [-EDGE, -RES, RES, EDGE].forEach(function (off) {
+      for (var u = 0; u < 1; u += 6 / L) quad(u, u + 6 / L, off, 0.1);
+    });
+    [-(RES + LANE), -(RES + 2 * LANE), RES + LANE, RES + 2 * LANE].forEach(function (off) {
+      for (var u = 0; u < 1; u += stepU) quad(u, u + 2 / L, off, 0.075);
+    });
+    var paintGeo = new THREE.BufferGeometry();
+    paintGeo.setAttribute("position", new THREE.Float32BufferAttribute(qp, 3));
+    paintGeo.setIndex(qi);
+    var paintMat = new THREE.MeshBasicMaterial({ color: 0xc3caff, transparent: true, opacity: 0, depthWrite: false, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 });
+    scene.add(new THREE.Mesh(paintGeo, paintMat));
+
+    /* Soft round sprite for lights */
+    var sc = document.createElement("canvas"); sc.width = sc.height = 64;
+    var sg = sc.getContext("2d"), rg = sg.createRadialGradient(32, 32, 0, 32, 32, 32);
+    rg.addColorStop(0, "rgba(255,255,255,1)"); rg.addColorStop(0.25, "rgba(255,255,255,0.8)"); rg.addColorStop(1, "rgba(255,255,255,0)");
+    sg.fillStyle = rg; sg.fillRect(0, 0, 64, 64);
+    var dot = new THREE.CanvasTexture(sc);
+
+    /* Street lights along both verges */
+    var lp = [], lc = [];
+    for (var u = 0; u < 1; u += 55 / L) {
+      [-VERGE - 1, VERGE + 1].forEach(function (off) { at(u, off, v); lp.push(v.x, 11, v.z); lc.push(1.0, 0.82, 0.55); });
+    }
+    var lampGeo = new THREE.BufferGeometry();
+    lampGeo.setAttribute("position", new THREE.Float32BufferAttribute(lp, 3));
+    lampGeo.setAttribute("color", new THREE.Float32BufferAttribute(lc, 3));
+    /* No light may grow past a sensible size when it passes right by the camera */
+    var capSize = function (mat, max) {
+      mat.onBeforeCompile = function (sh) {
+        sh.vertexShader = sh.vertexShader.replace("#include <fog_vertex>", "gl_PointSize = min(gl_PointSize, " + max.toFixed(1) + ");\n#include <fog_vertex>");
+      };
+      return mat;
+    };
+    var PR = Math.min(window.devicePixelRatio || 1, mobile ? 1.5 : 2);
+    var lamps = new THREE.Points(lampGeo, capSize(new THREE.PointsMaterial({ size: 2.6, map: dot, vertexColors: true, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, fog: true, opacity: 0.75 }), 30 * PR));
+    lamps.renderOrder = 1;
+    scene.add(lamps);
+
+    /* Roadside structure in blueprint line: lamp columns, and a gantry over both carriageways every 460 m or so */
+    var sl = [], gpts = [], gcol = [], sgp = [], sgi = [], sgl = [];
+    var seg = function (arr, u, o1, y1, o2, y2) { at(u, o1, v); arr.push(v.x, y1, v.z); at(u, o2, v); arr.push(v.x, y2, v.z); };
+    for (var lu = 0; lu < 1; lu += 55 / L) {
+      seg(sl, lu, -VERGE - 2.2, 0, -VERGE - 2.2, 11); seg(sl, lu, -VERGE - 2.2, 11, -VERGE - 1, 11);
+      seg(sl, lu, VERGE + 2.2, 0, VERGE + 2.2, 11); seg(sl, lu, VERGE + 2.2, 11, VERGE + 1, 11);
+    }
+    var GN = Math.round(L / 460), GW = VERGE + 0.8, GH0 = 6.7, GH1 = 7.8, bay = 2 * GW / 14;
+    for (i = 0; i < GN; i++) {
+      var gu = (i + 0.45) / GN;
+      seg(sl, gu, -GW, 0, -GW, GH1); seg(sl, gu, GW, 0, GW, GH1);
+      seg(sl, gu, -GW, GH1, GW, GH1); seg(sl, gu, -GW, GH0, GW, GH0);
+      for (var gq = 0; gq < 14; gq++) {
+        seg(sl, gu, -GW + gq * bay, GH0, -GW + (gq + 0.5) * bay, GH1);
+        seg(sl, gu, -GW + (gq + 0.5) * bay, GH1, -GW + (gq + 1) * bay, GH0);
+      }
+      for (var gs = -1; gs <= 1; gs += 2) {
+        for (var gln = 0; gln < 3; gln++) { at(gu, laneOff(gs, gln), v); gpts.push(v.x, GH0 - 0.45, v.z); gcol.push(0.8, 0.86, 1.0); }
+      }
+      if (i % 2 === 1) {
+        /* A motorway sign over the nearside carriageway: blue panel, white border, an arrow for each lane */
+        var su = gu - 0.5 / L, so1 = -(EDGE - 0.4), so2 = -(RES + 0.6), sy0 = 7.0, sy1 = 10.2, sb = sgp.length / 3;
+        at(su, so1, v); sgp.push(v.x, sy0, v.z, v.x, sy1, v.z);
+        at(su, so2, v); sgp.push(v.x, sy0, v.z, v.x, sy1, v.z);
+        sgi.push(sb, sb + 1, sb + 2, sb + 1, sb + 3, sb + 2);
+        var bu = gu - 0.6 / L;
+        seg(sgl, bu, so1 + 0.2, sy0 + 0.2, so2 - 0.2, sy0 + 0.2); seg(sgl, bu, so1 + 0.2, sy1 - 0.2, so2 - 0.2, sy1 - 0.2);
+        seg(sgl, bu, so1 + 0.2, sy0 + 0.2, so1 + 0.2, sy1 - 0.2); seg(sgl, bu, so2 - 0.2, sy0 + 0.2, so2 - 0.2, sy1 - 0.2);
+        for (gln = 0; gln < 3; gln++) {
+          var lc0 = laneOff(-1, gln);
+          seg(sgl, bu, lc0, sy0 + 0.55, lc0, sy0 + 1.5);
+          seg(sgl, bu, lc0 - 0.45, sy0 + 1.0, lc0, sy0 + 0.55); seg(sgl, bu, lc0 + 0.45, sy0 + 1.0, lc0, sy0 + 0.55);
+          seg(sgl, bu, lc0 - 1.1, sy1 - 0.8, lc0 + 1.1, sy1 - 0.8); seg(sgl, bu, lc0 - 0.8, sy1 - 1.25, lc0 + 0.8, sy1 - 1.25);
+        }
+      }
+    }
+    var slGeo = new THREE.BufferGeometry();
+    slGeo.setAttribute("position", new THREE.Float32BufferAttribute(sl, 3));
+    scene.add(new THREE.LineSegments(slGeo, new THREE.LineBasicMaterial({ color: 0x8f9cff, transparent: true, opacity: 0.5 })));
+    var signGeo = new THREE.BufferGeometry();
+    signGeo.setAttribute("position", new THREE.Float32BufferAttribute(sgp, 3));
+    signGeo.setIndex(sgi);
+    scene.add(new THREE.Mesh(signGeo, new THREE.MeshBasicMaterial({ color: 0x1d2bb0, side: THREE.DoubleSide })));
+    var sglGeo = new THREE.BufferGeometry();
+    sglGeo.setAttribute("position", new THREE.Float32BufferAttribute(sgl, 3));
+    scene.add(new THREE.LineSegments(sglGeo, new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.9 })));
+    var gsigGeo = new THREE.BufferGeometry();
+    gsigGeo.setAttribute("position", new THREE.Float32BufferAttribute(gpts, 3));
+    gsigGeo.setAttribute("color", new THREE.Float32BufferAttribute(gcol, 3));
+    var gsig = new THREE.Points(gsigGeo, capSize(new THREE.PointsMaterial({ size: 1.3, map: dot, vertexColors: true, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, fog: true }), 16 * PR));
+    gsig.renderOrder = 1;
+    scene.add(gsig);
+
+    /* The country around the road: towns and villages as clusters of light, some joined to the motorway by a lit road.
+       Without them the road crossed an empty plane. They thin out with distance and shimmer slightly, as lights do through air. */
+    var tp = [], tc = [], ts = [];
+    var gauss = function () { return (Math.random() + Math.random() + Math.random() - 1.5) * 1.15; };
+    var addLight = function (x, y, z, warm, b) {
+      tp.push(x, y, z);
+      if (warm) tc.push(b, 0.8 * b, 0.56 * b); else tc.push(0.82 * b, 0.88 * b, b);
+      ts.push(Math.random());
+    };
+    var TOWNS = mobile ? 40 : 76;
+    for (i = 0; i < TOWNS; i++) {
+      var tu = Math.random(), tside = Math.random() < 0.5 ? -1 : 1;
+      var toff = 170 + Math.pow(Math.random(), 1.5) * 1900;
+      var tsig = 40 + Math.random() * 200, tn = Math.round(tsig * (0.8 + Math.random() * 1.2) * (mobile ? 0.6 : 1));
+      for (var tj = 0; tj < tn; tj++) {
+        var to = toff + gauss() * tsig;
+        if (to < VERGE + 30) continue;
+        at(tu + gauss() * tsig / L, tside * to, v);
+        addLight(v.x, 2 + Math.random() * 7, v.z, Math.random() < 0.38, 0.7 + Math.random() * 0.8);
+      }
+      if (i % 3 === 0) {
+        for (var ro = VERGE + 34; ro < toff; ro += 40) { at(tu, tside * ro, v); addLight(v.x, 8, v.z, true, 0.8); }
+      }
+    }
+    for (i = 0; i < (mobile ? 500 : 1300); i++) {
+      at(Math.random(), (Math.random() < 0.5 ? -1 : 1) * (70 + Math.random() * 2600), v);
+      addLight(v.x, 3, v.z, Math.random() < 0.5, 0.4 + Math.random() * 0.5);
+    }
+    var townGeo = new THREE.BufferGeometry();
+    townGeo.setAttribute("position", new THREE.Float32BufferAttribute(tp, 3));
+    townGeo.setAttribute("tint", new THREE.Float32BufferAttribute(tc, 3));
+    townGeo.setAttribute("seed", new THREE.Float32BufferAttribute(ts, 1));
+    var townMat = new THREE.ShaderMaterial({
+      uniforms: { uTime: { value: 0 }, uPR: { value: PR } },
+      vertexShader: [
+        "attribute vec3 tint; attribute float seed; uniform float uTime; uniform float uPR;",
+        "varying vec3 vC; varying float vA;",
+        "void main() {",
+        "  vec4 mv = modelViewMatrix * vec4(position, 1.0);",
+        "  float d = -mv.z;",
+        "  float tw = 0.78 + 0.22 * sin(uTime * (1.2 + seed * 2.6) + seed * 40.0);",
+        "  vA = exp(-pow(d * 0.00052, 2.0)) * tw * smoothstep(0.0, 60.0, d);",
+        "  vC = tint;",
+        "  gl_PointSize = clamp(520.0 / d, 2.3, 5.0) * uPR;",
+        "  gl_Position = projectionMatrix * mv;",
+        "}"
+      ].join("\n"),
+      fragmentShader: [
+        "varying vec3 vC; varying float vA;",
+        "void main() { float r = length(gl_PointCoord - 0.5); gl_FragColor = vec4(vC, vA * smoothstep(0.5, 0.12, r)); }"
+      ].join("\n"),
+      transparent: true, blending: THREE.AdditiveBlending, depthWrite: false
+    });
+    var towns = new THREE.Points(townGeo, townMat);
+    towns.frustumCulled = false; towns.renderOrder = 1;
+    scene.add(towns);
+
+    /* A few stars, kept faint */
+    var stp = [], stc = [];
+    for (i = 0; i < (mobile ? 300 : 700); i++) {
+      var sa = Math.random() * Math.PI * 2, se = 0.16 + Math.random() * 1.35, sbr = 0.16 + Math.pow(Math.random(), 3) * 0.6;
+      stp.push(Math.cos(se) * Math.cos(sa) * 3400, Math.sin(se) * 3400, Math.cos(se) * Math.sin(sa) * 3400);
+      stc.push(sbr * 0.8, sbr * 0.86, sbr);
+    }
+    var starGeo = new THREE.BufferGeometry();
+    starGeo.setAttribute("position", new THREE.Float32BufferAttribute(stp, 3));
+    starGeo.setAttribute("color", new THREE.Float32BufferAttribute(stc, 3));
+    var stars = new THREE.Points(starGeo, new THREE.PointsMaterial({ size: 1.7, sizeAttenuation: false, map: dot, vertexColors: true, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, fog: false }));
+    stars.frustumCulled = false;
+    scene.add(stars);
+
+    /* Traffic: each car is two light streaks plus two glowing heads */
+    var CARS = mobile ? 900 : 2400;
+    var cars = [];
+    for (i = 0; i < CARS; i++) {
+      var side = Math.random() < 0.5 ? -1 : 1;
+      cars.push({ side: side, lane: Math.floor(Math.random() * 3), u: Math.random(), v: (22 + Math.random() * 14) / L });
+    }
+    var LIGHTS = CARS * 2;
+    var sPos = new Float32Array(LIGHTS * 6), sCol = new Float32Array(LIGHTS * 6);
+    var hPos = new Float32Array(LIGHTS * 3), hCol = new Float32Array(LIGHTS * 3);
+    var streakGeo = new THREE.BufferGeometry();
+    streakGeo.setAttribute("position", new THREE.BufferAttribute(sPos, 3));
+    streakGeo.setAttribute("color", new THREE.BufferAttribute(sCol, 3));
+    var headGeo = new THREE.BufferGeometry();
+    headGeo.setAttribute("position", new THREE.BufferAttribute(hPos, 3));
+    headGeo.setAttribute("color", new THREE.BufferAttribute(hCol, 3));
+    var streaks = new THREE.LineSegments(streakGeo, new THREE.LineBasicMaterial({ vertexColors: true, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, fog: false }));
+    var heads = new THREE.Points(headGeo, capSize(new THREE.PointsMaterial({ size: 2.4, map: dot, vertexColors: true, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, fog: false }), 30 * PR));
+    streaks.frustumCulled = false; heads.frustumCulled = false;
+    streaks.renderOrder = 2; heads.renderOrder = 3;
+
+    /* Wet road: every light gets a soft smear below it, the way lights reflect off damp tarmac. Only shown from low down */
+    var wc = document.createElement("canvas"); wc.width = 32; wc.height = 128;
+    var wg = wc.getContext("2d"), wl = wg.createLinearGradient(0, 64, 0, 128);
+    wl.addColorStop(0, "rgba(255,255,255,0.95)"); wl.addColorStop(1, "rgba(255,255,255,0)");
+    wg.fillStyle = wl; wg.globalAlpha = 0.35; wg.fillRect(10, 64, 12, 64); wg.globalAlpha = 1; wg.fillRect(14, 64, 4, 64);
+    var wetMat = capSize(new THREE.PointsMaterial({ size: 10, map: new THREE.CanvasTexture(wc), vertexColors: true, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false, fog: false }), 170 * PR);
+    var wet = new THREE.Points(headGeo, wetMat);
+    wet.frustumCulled = false; wet.renderOrder = 2;
+    scene.add(wet);
+    scene.add(streaks); scene.add(heads);
+    var TAIL = [1.0, 0.46, 0.1], HEAD = [0.92, 0.95, 1.0];
+
+    /* Trails lengthen as the camera comes down, so the low view reads as a long exposure photograph */
+    var drawCars = CARS, trail = 0.6;
+    var updateCars = function (dt, cam) {
+      for (var c = 0; c < drawCars; c++) {
+        var car = cars[c];
+        car.u += (car.side < 0 ? 1 : -1) * car.v * dt;
+        var off = laneOff(car.side, car.lane);
+        var lenU = car.v * trail;
+        var tailU = car.side < 0 ? car.u - lenU : car.u + lenU;
+        var col = car.side < 0 ? TAIL : HEAD;
+        for (var s = 0; s < 2; s++) {
+          var o = off + (s ? 0.8 : -0.8);
+          at(car.u, o, v); at(tailU, o, v2);
+          var dx = v.x - cam.x, dz = v.z - cam.z;
+          var fade = clamp(1.15 - Math.sqrt(dx * dx + dz * dz) / 2600, 0, 1);
+          var li = c * 2 + s, si = li * 6, hi = li * 3;
+          sPos[si] = v.x; sPos[si + 1] = 0.7; sPos[si + 2] = v.z;
+          sPos[si + 3] = v2.x; sPos[si + 4] = 0.7; sPos[si + 5] = v2.z;
+          sCol[si] = col[0] * fade; sCol[si + 1] = col[1] * fade; sCol[si + 2] = col[2] * fade;
+          sCol[si + 3] = 0; sCol[si + 4] = 0; sCol[si + 5] = 0;
+          hPos[hi] = v.x; hPos[hi + 1] = 0.7; hPos[hi + 2] = v.z;
+          hCol[hi] = col[0] * fade; hCol[hi + 1] = col[1] * fade; hCol[hi + 2] = col[2] * fade;
+        }
+      }
+      streakGeo.attributes.position.needsUpdate = true;
+      streakGeo.attributes.color.needsUpdate = true;
+      headGeo.attributes.position.needsUpdate = true;
+      headGeo.attributes.color.needsUpdate = true;
+    };
+
+    /* Post processing: bloom makes the lights glow like a long exposure */
+    var composer = null, bloom = null;
+    if (!mobile && THREE.EffectComposer && THREE.UnrealBloomPass) {
+      try {
+        composer = new THREE.EffectComposer(renderer);
+        composer.addPass(new THREE.RenderPass(scene, camera));
+        bloom = new THREE.UnrealBloomPass(new THREE.Vector2(256, 256), 0.95, 0.45, 0.55);
+        composer.addPass(bloom);
+      } catch (err) { composer = null; }
+    }
+
+    /* The dive: from 95 m over the central reservation down to 5 m over the nearside lanes, picking up speed on the way.
+       It starts a short way before a signed gantry, so the first dive passes under one */
+    var camU = 1.45 / GN - 380 / L, smx = 0, smy = 0, ep = 0, en = 0, clock = 0;
+    var placeCamera = function (dt) {
+      clock += dt;
+      townMat.uniforms.uTime.value = clock;
+      var targetX = finePointer ? (px / window.innerWidth - 0.5) : 0;
+      var targetY = finePointer ? (py / window.innerHeight - 0.5) : 0;
+      if (px < -100) { targetX = 0; targetY = 0; }
+      smx += (targetX - smx) * 0.04; smy += (targetY - smy) * 0.04;
+      var e, lift = 0;
+      if (glMode === "end") {
+        /* Contact: start low and climb back to the aerial view as the section scrolls in */
+        en += (endP - en) * 0.1;
+        var q = clamp(0.85 - en * 0.85, 0, 1);
+        e = q * q * (3 - 2 * q);
+      } else {
+        ep += (heroP - ep) * 0.12;
+        var dv = clamp(ep / DIVE, 0, 1);
+        e = dv * dv * (3 - 2 * dv);
+        lift = clamp((ep - 0.8) / 0.2, 0, 1); lift = lift * lift * (3 - 2 * lift);
+      }
+      camU += ((16 + 8 * e) / L) * dt;
+      var h = 95 - 90 * e + smy * 6 * (1 - 0.7 * e);
+      var lat = -5.5 * e;
+      at(camU, lat + smx * (10 - 7 * e), v);
+      camera.position.set(v.x, h, v.z);
+      var ahead = 300 - 235 * e;
+      at(camU + ahead / L, lat * 0.6 + smx * 4, v2);
+      camera.lookAt(v2.x, 16 * lift, v2.z);
+      camera.fov = 52 + 10 * e; camera.updateProjectionMatrix();
+      wetMat.opacity = 0.36 * e * e;
+      dome.position.set(camera.position.x, 0, camera.position.z);
+      stars.position.set(camera.position.x, 0, camera.position.z);
+      trail = 0.6 + 1.5 * e;
+      paintMat.opacity = 0.36 * e;
+      lineMat.opacity = 0.32 - 0.2 * e;
+    };
+
+    var resize = function () {
+      var w = canvas.clientWidth, h = canvas.clientHeight;
+      if (!w || !h) return;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      if (composer) { composer.setSize(w, h); }
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    /* If the machine can't hold a smooth frame rate, step the quality down: sharpness first, then glow, then half the traffic */
+    var level = 0, qAcc = 0, qN = 0, born = performance.now();
+    var stepDown = function () {
+      level++;
+      if (level === 1) { renderer.setPixelRatio(1); if (composer && composer.setPixelRatio) composer.setPixelRatio(1); townMat.uniforms.uPR.value = 1; resize(); }
+      else if (level === 2) { composer = null; }
+      else if (level === 3) { drawCars = Math.round(CARS / 2); streakGeo.setDrawRange(0, drawCars * 4); headGeo.setDrawRange(0, drawCars * 2); }
+    };
+    var last = 0, running = true, raf = null;
+    var frame = function (now) {
+      raf = null;
+      var raw = last ? now - last : 16;
+      if (now - born > 2500 && raw < 250 && level < 3 && !window.__olarisHQ) {
+        qAcc += raw; qN++;
+        if (qN >= 45) { if (qAcc / qN > 24) stepDown(); qAcc = 0; qN = 0; }
+      }
+      var dt = last ? Math.min(0.05, (now - last) / 1000) : 0.016;
+      last = now;
+      placeCamera(dt);
+      updateCars(dt, camera.position);
+      if (composer) composer.render(); else renderer.render(scene, camera);
+      if (running) raf = requestAnimationFrame(frame);
+    };
+    if (reduce) {
+      placeCamera(0); updateCars(0, camera.position);
+      if (composer) composer.render(); else renderer.render(scene, camera);
+    } else {
+      raf = requestAnimationFrame(frame);
+      if ("IntersectionObserver" in window) {
+        /* One scene, two homes: the canvas sits in the hero, and moves into Contact when that comes on screen.
+           Only one of them is ever visible, so the cost stays that of a single scene */
+        contactEl.classList.add("has-gl");
+        var seen = { h: true, c: false };
+        var home = function (where) {
+          if (canvas.parentNode === where) return;
+          where.insertBefore(canvas, where.firstChild);
+          glMode = where === hero ? "hero" : "end";
+          if (glMode === "end") en = endP;
+          resize();
+        };
+        var gio = new IntersectionObserver(function (list) {
+          list.forEach(function (x) { seen[x.target === hero ? "h" : "c"] = x.isIntersecting; });
+          if (seen.h) home(hero); else if (seen.c) home(contactEl);
+          running = seen.h || seen.c;
+          if (running && !raf) { last = 0; raf = requestAnimationFrame(frame); }
+        });
+        gio.observe(hero); gio.observe(contactEl);
+      }
+    }
+    return { resize: resize };
+  })();
+  if (!gl) hero.classList.add("no-gl");
+
+  /* Scroll choreography with GSAP: the hero pins while the camera dives, Approach scrolls sideways */
+  var hasGSAP = window.gsap && window.ScrollTrigger && !reduce;
+  if (hasGSAP) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    var mm = gsap.matchMedia();
+    mm.add("(max-width: 900px)", function () {
+      ScrollTrigger.create({
+        trigger: hero,
+        start: function () { return "top " + bar.offsetHeight + "px"; },
+        end: "bottom top",
+        scrub: true,
+        onUpdate: function (st) { heroP = st.progress; applyHero(); }
+      });
+    });
+    mm.add("(min-width: 901px)", function () {
+      ScrollTrigger.create({
+        trigger: hero,
+        start: function () { return "top " + bar.offsetHeight + "px"; },
+        end: "+=175%",
+        pin: true,
+        scrub: true,
+        onUpdate: function (st) { heroP = st.progress; applyHero(); }
+      });
+      var sec = document.querySelector(".approach");
+      var track = sec.querySelector(".track");
+      var fill = sec.querySelector(".progress i");
+      sec.classList.add("is-h");
+      var dist = function () { return Math.max(0, track.scrollWidth - track.parentElement.clientWidth); };
+      gsap.to(track, {
+        x: function () { return -dist(); },
+        ease: "none",
+        scrollTrigger: {
+          trigger: sec,
+          start: function () { return "top " + bar.offsetHeight + "px"; },
+          end: function () { return "+=" + dist(); },
+          pin: true,
+          scrub: 0.6,
+          invalidateOnRefresh: true,
+          onUpdate: function (st) { fill.parentNode.style.setProperty("--p", st.progress.toFixed(4)); }
+        }
+      });
+      return function () { sec.classList.remove("is-h"); gsap.set(track, { clearProps: "transform" }); };
+    });
+    /* These are set up after the pinned sections, so their positions allow for the extra scroll the pins add */
+    gsap.utils.toArray(".word").forEach(function (el) {
+      gsap.fromTo(el, { xPercent: 3 }, { xPercent: -3, ease: "none", scrollTrigger: { trigger: el, start: "top bottom", end: "bottom top", scrub: true } });
+    });
+    /* The stepped edges build themselves, one column after the next, as they scroll in */
+    gsap.utils.toArray(".steps").forEach(function (el) {
+      gsap.from(el.children, { scaleY: 0.12, transformOrigin: "50% 0%", ease: "none", stagger: 0.12, scrollTrigger: { trigger: el, start: "top bottom", end: "top 30%", scrub: true } });
+    });
+    ScrollTrigger.create({ trigger: contactEl, start: "top bottom", end: "bottom bottom", scrub: true, onUpdate: function (st) { endP = st.progress; } });
+    window.addEventListener("load", function () { ScrollTrigger.refresh(); });
+  } else if (!reduce) {
+    var onScroll = function () {
+      heroP = clamp(window.scrollY / Math.max(1, hero.offsetHeight), 0, 1);
+      var cr = contactEl.getBoundingClientRect();
+      endP = clamp((window.innerHeight - cr.top) / Math.max(1, cr.height), 0, 1);
+      applyHero();
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+})();
+</script>
+
+</body>
+</html>
