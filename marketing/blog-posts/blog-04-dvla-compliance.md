@@ -9,11 +9,11 @@ date: 2025-10-22
 
 # DVLA Compliance: What Most Fleet Managers Get Wrong
 
-There's a question we ask every fleet manager we meet: "When did you last check your drivers' DVLA licences?"
+There's a question I ask every fleet manager I meet: "When did you last check your drivers' DVLA licences?"
 
 The answers vary. "At recruitment, obviously." "Annual review." "Every couple of years." One manager said "We keep copies on file from when they started."
 
-Then we ask the follow-up: "And if a licence expired, how would you know?"
+Then I ask the follow-up: "And if a licence expired, how would you know?"
 
 The silence that follows is telling.
 
@@ -33,17 +33,17 @@ This is not optional. It's a legal duty under the Transport Act 1985 and the Roa
 
 **2. You must maintain an audit trail.**
 
-You can't just "assume" someone is licensed. You need documented evidence that you've checked. This evidence must be retained for the duration of the driver's employment plus a reasonable period afterwards (typically, we'd say three years). If you're audited and asked "when did you last check this driver's licence?" you need to be able to provide a date and a record of what you checked.
+You can't just "assume" someone is licensed. You need documented evidence that you've checked. This evidence must be retained for the duration of the driver's employment plus a reasonable period afterwards (typically, I'd say three years). If you're audited and asked "when did you last check this driver's licence?" you need to be able to provide a date and a record of what you checked.
 
 **3. The check must be current or recent enough to be meaningful.**
 
-This is where many fleets fail. Some fleet managers check licences at recruitment and assume they're valid for the entire employment period. But a licence can expire, be revoked, be suspended, or have penalties added to it — all after recruitment. A check done three years ago is evidence of compliance at that point in time. It's not evidence of ongoing compliance.
+This is where many fleets fail. Some fleet managers check licences at recruitment and assume they're valid for the entire employment period. But a licence can expire, be revoked, be suspended, or have penalties added to it, all after recruitment. A check done three years ago is evidence of compliance at that point in time. It's not evidence of ongoing compliance.
 
 The standard practice in professional fleet operations is to check licences annually, or more frequently if your drivers are high-risk (frequent movers, accident history, work in sectors with higher compliance scrutiny). Some fleets check quarterly for rigorous compliance.
 
 **4. You must have a process for acting on findings.**
 
-If you discover a driver's licence has expired or has an issue, you need to document that you took action: suspended the driver, didn't allow them to drive, investigated the issue, etc. "We found it but didn't do anything about it" is not a defence. It's evidence of negligence.
+If you discover a driver's licence has expired or has an issue, you need to document that you took action: suspended the driver, didn't allow them to drive, investigated the issue, etc. "We found it but didn't do anything about it" is evidence of negligence, not a defence.
 
 **5. You must check the right information.**
 
@@ -56,7 +56,7 @@ A DVLA driving licence shows:
 - Any penalties or points
 - Any medical conditions or restrictions
 
-You need to verify all of these. A driver might have a valid licence for cars but not for the van they're driving. You need to catch that. A driver might have a clean licence now but failed a medical test earlier — that would show as a restriction. You need to know.
+You need to verify all of these. A driver might have a valid licence for cars but not for the van they're driving. You need to catch that. A driver might have a clean licence now but failed a medical test earlier. That would show as a restriction. You need to know.
 
 ## Common Mistakes (And How They Expose You)
 
@@ -64,13 +64,13 @@ You need to verify all of these. A driver might have a valid licence for cars bu
 
 "We verified everyone when they started" is a common statement. But a licence can expire, be suspended, or have penalties added at any point. A driver who had a clean licence when hired could be unfit to drive a year later. If you haven't re-checked, you don't know.
 
-Liability exposure: If an accident occurs and you're asked "did you check this driver's licence?" your answer is "yes, four years ago." That's not meaningful compliance. It's evidence that you stopped checking after that point, despite a legal obligation to ensure ongoing compliance.
+Liability exposure: If an accident occurs and you're asked "did you check this driver's licence?" your answer is "yes, four years ago." That's not meaningful compliance, and it's evidence that you stopped checking after that point, despite a legal obligation to ensure ongoing compliance.
 
 **Mistake 2: Using paper copies filed in personnel records.**
 
 A paper copy of a licence is a snapshot in time. It proves the licence existed on a specific date. It doesn't prove it's still valid. If you kept a photocopy from 2020 and the licence expired in 2022, the photocopy is useless as a proof of current compliance.
 
-Some fleets ask drivers to provide updated copies regularly. This is better, but it still relies on drivers remembering to bring them in. It's easy to miss someone. And drivers might not realize their licence has expired.
+Some fleets ask drivers to provide updated copies regularly. This is better, but it still relies on drivers remembering to bring them in. It's easy to miss someone. And drivers might not realise their licence has expired.
 
 Liability exposure: The regulatory body (or court, if there's an accident) will ask, "How did you verify the licence was current?" Showing a photocopy won't answer that question. A photocopy is just a record of what the licence looked like on one day.
 
@@ -84,7 +84,7 @@ That's a clear, dated, specific record. If you don't have that, you have a probl
 
 **Mistake 4: Not checking for penalties, points, or medical restrictions.**
 
-A driver might have a valid licence but have 12 points on it (meaning they're close to disqualification). Or a medical condition that requires annual checks. Or a restriction that limits them to automatic vehicles. Combining licence checks with [driver behaviour monitoring](/blog/driver-behaviour-insurance) gives you a complete picture of risk — not just whether someone is licensed, but how they're actually driving.
+A driver might have a valid licence but have 12 points on it (meaning they're close to disqualification). Or a medical condition that requires annual checks. Or a restriction that limits them to automatic vehicles. Combining licence checks with [driver behaviour monitoring](/blog/driver-behaviour-insurance) gives you a complete picture of risk: not just whether someone is licensed, but how they're actually driving.
 
 If you're not looking at the full licence detail, you're missing risks.
 
@@ -98,7 +98,7 @@ An unlicensed driver means no insurance coverage. If there's an incident, you pa
 
 ## The Consequences: Why This Matters
 
-Let's be clear about what happens if you get compliance wrong:
+Here's what happens if you get compliance wrong:
 
 **Civil liability.** An unlicensed driver causes an accident. A passenger or third party is injured. They sue your company. Your insurance doesn't apply (unlicensed driver). You pay the damages, legal costs, and medical costs out of pocket. Easily £500,000+ for a serious injury.
 
@@ -118,7 +118,7 @@ There are two ways to check DVLA licences: the right way and the risky way.
 
 **The right way: DVLA Share licence service.**
 
-The DVLA operates a "Share Licence" service that allows drivers to grant employers direct access to their licence record. The driver logs into their DVLA account, authorizes the employer, and the employer gains real-time access to the driver's licence data.
+The DVLA operates a "Share Licence" service that allows drivers to grant employers direct access to their licence record. The driver logs into their DVLA account, authorises the employer, and the employer gains real-time access to the driver's licence data.
 
 Pros:
 - Direct from the government source (DVLA)
@@ -173,7 +173,7 @@ The best systems alert you not just when a licence has expired, but when it's ab
 
 If a driver's licence is set to expire in 60 days, the system flags it. You can contact the driver and ask them to renew it before it expires. You catch the issue before it becomes a compliance failure.
 
-This is important because drivers sometimes don't realize their licence is about to expire. Proactive contact prevents an unwanted discovery where you check and find out it's already expired.
+This is important because drivers sometimes don't realise their licence is about to expire. Proactive contact prevents an unwanted discovery where you check and find out it's already expired.
 
 ## Audit Trails and GDPR Compliance
 
@@ -191,11 +191,11 @@ GDPR compliance means:
 
 - You only store the minimum data needed (licence number, validity status, expiry date, restrictions)
 - You don't store unnecessary personal information (full name might be needed, but photo or address probably isn't)
-- You delete records after a reasonable retention period (we recommend 3 years post-employment, then delete)
+- You delete records after a reasonable retention period (I recommend 3 years post-employment, then delete)
 - Drivers have a right to see what you've recorded about them and request correction if it's inaccurate
 - You have a legal basis for processing the data (compliance obligation) and can explain it clearly
 
-Some fleet management systems include PII (personally identifiable information) masking, which shows "Driver 047 - Licence Valid" instead of full details, unless someone with specific access rights logs in. This is good practice.
+Some fleet management systems include PII (personally identifiable information) masking, which shows "Driver 047: Licence Valid" instead of full details, unless someone with specific access rights logs in. This is good practice.
 
 ## Building a Compliance Audit Trail You Can Defend
 
@@ -211,13 +211,13 @@ If you're ever questioned about compliance (by regulator, insurer, or court), he
 
 5. **Third-party verification (if applicable).** "We use [DVLA Share Licence service] to perform these checks. Here's our integration certificate and our audit log showing all checks performed."
 
-If you can show this — a systematic, documented, regularly performed compliance process with clear records — you've done what the law requires. If an issue occurs, you've done everything reasonable to prevent it.
+If you can show this (a systematic, documented, regularly performed compliance process with clear records), you've done what the law requires. If an issue occurs, you've done everything reasonable to prevent it.
 
 ## The Cost of Compliance vs. The Cost of Non-Compliance
 
 Setting up DVLA integration and automated checking:
 
-- Software/service cost: typically £20-100 per driver per year, depending on the provider
+- Software/service cost: typically £20 to £100 per driver per year, depending on the provider
 - Setup time: a few hours of configuration and driver onboarding
 - Ongoing time: minimal, mostly automated
 
@@ -229,9 +229,9 @@ Cost of non-compliance (if it goes wrong):
 - Regulatory suspension: loss of operating licence, business interruption
 - Reputation damage: loss of contracts, client confidence
 
-The ROI on compliance spending is infinite. It's not an investment; it's a legal requirement. The only question is whether you'll do it systematically and defensibly, or whether you'll get caught out.
+The ROI on compliance spending is infinite, and it's a legal requirement anyway. The only question is whether you'll do it systematically and defensibly, or whether you'll get caught out.
 
-## What to Do on Monday Morning
+## Eight Steps to Fix Your Licence Checking
 
 1. **Audit your current status.** Pull a list of all drivers. When was each driver's licence last checked? If you can't answer that question with a date and a result, you have a compliance gap.
 
@@ -243,7 +243,7 @@ The ROI on compliance spending is infinite. It's not an investment; it's a legal
 
 5. **Automate and document.** Set up automated checks on your schedule. Ensure you're recording the date, result, and any follow-up action.
 
-6. **Brief your team.** Make sure drivers understand why they're being asked to authorize licence sharing and what you're checking for. Make sure your operations and HR teams know the process.
+6. **Brief your team.** Make sure drivers understand why they're being asked to authorise licence sharing and what you're checking for. Make sure your operations and HR teams know the process.
 
 7. **Review your insurance.** Confirm with your insurer that you understand the terms around unlicensed drivers and what compliance they require you to maintain.
 
@@ -255,4 +255,4 @@ The fleets that have this right don't think about it. It's just part of how they
 
 ## Next Step
 
-If you'd like to understand your current compliance status and what a systematic checking process could look like for your fleet, [contact us](/contact). The [Olaris platform](/platform) integrates DVLA checking, maintains audit trails, and ensures you have documented evidence of compliance. It takes the guesswork out of one of your most important legal obligations.
+If you'd like to understand your current compliance status and what a systematic checking process could look like for your fleet, [contact me](/#contact). A systematic process that integrates DVLA checking and maintains audit trails gives you documented evidence of compliance. It takes the guesswork out of one of your most important legal obligations.

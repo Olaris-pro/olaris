@@ -1,24 +1,8 @@
 import { MetadataRoute } from 'next'
+import { postSlugs } from '@/lib/blog'
 
 const BASE_URL = 'https://olaris.co.uk'
 
-const blogSlugs = [
-  'fleet-cost-report',
-  'excess-mileage',
-  'driver-behaviour-insurance',
-  'dvla-compliance',
-  'scope-123-fleet',
-  'ev-transition-fleet',
-  'connected-vehicle-data',
-  'lease-company-mileage',
-  'fleet-data-single-view',
-  'fleet-management-2026',
-  'what-is-fleet-intelligence',
-  'what-is-grey-fleet',
-  'what-is-driver-behaviour-scoring',
-  'what-is-fleet-compliance',
-  'what-is-an-at-risk-driver',
-]
 
 const featureSlugs = [
   'mileage-tracking',
@@ -50,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/terms`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
   ]
 
-  const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
+  const blogPages: MetadataRoute.Sitemap = postSlugs.map((slug) => ({
     url: `${BASE_URL}/blog/${slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly',

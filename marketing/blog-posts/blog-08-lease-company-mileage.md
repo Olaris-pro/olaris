@@ -1,7 +1,7 @@
 ---
 title: "Mileage Compliance Is Where Lease Company Margins Live and Die"
 metaTitle: "Lease Company Mileage: Where Fleet Margins Live"
-metaDescription: "Excess mileage charges, residual values, condition assessment—why live mileage tracking is now table stakes for lease fleet operations."
+metaDescription: "Excess mileage charges, residual values, condition assessment: why live mileage tracking is now table stakes for lease fleet operations."
 category: "Mileage"
 headerImage: "Fleet manager reviewing live mileage data on multiple vehicles, with a calendar showing key contract dates and trend analysis graphs indicating vehicles trending over annual allowances"
 date: 2025-12-17
@@ -17,9 +17,9 @@ Let me give you the numbers first, because the numbers explain everything.
 
 A typical contract fleet of 50 vehicles across a 3-year lease, average annual mileage allowance of 12,000 miles, typical lease rate of £280/month per vehicle.
 
-If your fleet averages 8,000 miles per vehicle per year? Clean contracts, no excess mileage charges.
+If your fleet averages 8,000 miles per vehicle per year, you have clean contracts and no excess mileage charges.
 
-If your fleet averages 14,000 miles per vehicle per year? You're paying the lease company £3.60 per excess mile, times 2,000 excess miles, times 50 vehicles, times 3 years. That's £1.08 million in excess mileage charges — and that's just [the hidden cost of excess mileage](/blog/excess-mileage) at scale.
+If your fleet averages 14,000 miles per vehicle per year, you're paying the lease company £3.60 per excess mile, times 2,000 excess miles, times 50 vehicles, times 3 years. That's £1.08 million in excess mileage charges, and that's just [the hidden cost of excess mileage](/blog/excess-mileage) at scale.
 
 But that's just the charge. The real cost is uglier.
 
@@ -33,35 +33,35 @@ The problem is that most fleet operators don't actually know their mileage until
 
 ## Why Annual Mileage Reviews Are Essentially Useless
 
-Here's the typical lease company contract: "Your vehicle allowance is 12,000 miles per year. At de-fleet, we'll measure the odometer and calculate excess mileage charges."
+Here's the typical lease company contract: "Your vehicle allowance is 12,000 miles per year. At de-fleet, the odometer will be measured and excess mileage charges calculated."
 
-And here's the typical fleet operator's process: "We'll track mileage throughout the year so we know where we stand."
+And here's the typical fleet operator's process: track mileage throughout the year to know where they stand.
 
-Then here's what actually happens: they don't track it. Not actively. They track fuel spend, they track maintenance, they track driver behaviour. But mileage? They get an annual report from the lease company in November and go "oh, we've done 14,500 miles. That's over."
+Then here's what actually happens: they don't track it. Not actively. They track fuel spend, they track maintenance, they track driver behaviour. But mileage? They get an annual report from the lease company in November and go "oh, 14,500 miles. That's over."
 
 By November, for a March de-fleet, you're three months away from returning the vehicle. Your driver has already done the mileage. You can't unwind it. You can't swap the vehicle. You can't change the route. You're paying.
 
 An annual review is a damage report, not a management tool. By the time you see it, the damage is done.
 
-## Live Odometer Tracking: When You Can Actually Act
+## Live Odometer Tracking Gives You Time to Act
 
 This is where everything changes.
 
 Instead of waiting for an annual report, you get a live odometer reading. Every day. Every vehicle. Automatically.
 
-Not from driver input. Not from an estimate. From the vehicle itself, via OEM telemetry.
+It comes from the vehicle itself, via OEM telemetry, rather than from driver input or an estimate.
 
 Here's what that means operationally:
 
 A regional delivery company with 30 vehicles, 12,000-mile annual allowances. Mid-year review (6 months in):
 
-- 22 vehicles are tracking properly: 6,000–6,200 miles, on pace
-- 5 vehicles are trending over: 6,800–7,200 miles already
-- 3 vehicles are well under: 3,400–4,200 miles
+- 22 vehicles are tracking properly: 6,000 to 6,200 miles, on pace
+- 5 vehicles are trending over: 6,800 to 7,200 miles already
+- 3 vehicles are well under: 3,400 to 4,200 miles
 
 With live data, you see this. In month 6. Not month 11.
 
-What do you do?
+Here's what you can do.
 
 **For the 5 trending over:** You have 6 months to act. You can:
 - Reassign them to lower-mileage duties
@@ -78,9 +78,9 @@ You have options. You have time. You have data to support the conversation.
 
 You make decisions based on fact, not surprise.
 
-The fleet operator who does this saves an average of 2.5% on fleet costs across a 3-year cycle, just from mileage management. That's not trivial. That's real money.
+The fleet operator who does this saves an average of 2.5% on fleet costs across a 3-year cycle, just from mileage management. That's real money.
 
-## Mileage Pooling: The Conversation Nobody Has But Everyone Needs
+## Mileage Pooling Cuts Excess Charges, but Few Fleets Use It
 
 Here's a scenario: You've got 40 vehicles on lease. They're split across four functions: field service (12 vehicles), logistics (18 vehicles), sales (6 vehicles), and admin (4 vehicles).
 
@@ -96,7 +96,7 @@ But most fleet operators don't use it. They don't know it's available. Or they t
 
 Live mileage data makes pooling visible and manageable. You can see which functions are trending over and under. You can model different pooling scenarios. You can have informed conversations with your lease company about contract structures.
 
-A fleet that actively manages pooling can reduce excess mileage charges by 40–60%. This isn't savings through luck. It's savings through data-driven allocation.
+A fleet that actively manages pooling can reduce excess mileage charges by 40 to 60%. Those savings come from data-driven allocation.
 
 ## Early Warning: The Six-Month Flagging System
 
@@ -108,9 +108,9 @@ At month 9, you re-check. If the vehicle is still trending over, you escalate. Y
 
 At month 12 (or whatever your mid-cycle point is), you do a full reconciliation. You're not surprised. You've been managing it for six months.
 
-This discipline prevents the end-of-contract surprise. It prevents the "oh no, we're £18,000 over, that's coming out of our fleet budget" conversation.
+This discipline prevents the end-of-contract surprise. It prevents the "oh no, £18,000 over, and that's coming out of the fleet budget" conversation.
 
-The fleets that implement this discipline reduce unplanned mileage variance by 70%. They move from "we hope we stay in budget" to "we know we're in budget."
+The fleets that implement this discipline reduce unplanned mileage variance by 70%. They move from hoping they stay in budget to knowing they're in budget.
 
 ## The Contract Lifecycle: How Mileage Data Improves Every Stage
 
@@ -128,7 +128,7 @@ Mileage insight should shape every decision in the vehicle lifecycle.
 
 Get mileage right and you get every other decision right.
 
-## Driver Behaviour and Vehicle Condition: The Connection Most Fleets Miss
+## Mileage and Driver Behaviour Together Decide Vehicle Condition
 
 Here's something that doesn't get enough attention: mileage and driver behaviour are directly connected.
 
@@ -152,11 +152,11 @@ The fleets that manage this properly do three things:
 
 That discipline means your vehicles come back in better condition and your lease company residual value assessments are accurate and fair.
 
-## The Real Fleet Advantage: It's All Data
+## The Advantage Comes From Seeing Mileage Every Day
 
-I built Olaris because of this exact problem. I ran a lease company. I knew the pain fleets experience with mileage. I knew why it mattered so much to our margins.
+I know this exact problem from the inside. I ran a lease company. I knew the pain fleets experience with mileage. I knew why it mattered so much to the business's margins.
 
-The leap forward isn't a magic solution. It's visibility. It's having the data every day, automatically, accurately. It's being able to see trends instead of surprises. It's being able to act on mileage at month 4 instead of month 14.
+The leap forward is visibility. It's having the data every day, automatically, accurately. It's being able to see trends instead of surprises. It's being able to act on mileage at month 4 instead of month 14.
 
 Most lease companies will tell you they don't have the tools to make mileage data visible to their customers in real-time. That's changing now. [OEM telemetry for live odometer readings](/blog/connected-vehicle-data) means you can get data directly from the vehicle, without driver input or aftermarket hardware.
 
@@ -179,8 +179,6 @@ The good news: more lease companies are building this capability. If yours isn't
 
 ---
 
-**Want to see your lease fleet mileage in real-time and avoid excess charges?** [Get in touch with Olaris](/contact) — we built this for lease companies, because we were one — or [explore our platform for lease fleet management](/platform).
+**See your lease fleet mileage in real-time and avoid excess charges.** [Get in touch with Olaris](/#contact).
 
-**Calculate your exposure →** Try our [free excess mileage calculator](/tools/excess-mileage-calculator) to see what excess charges could cost your fleet before end of contract.
-
-**Looking for a new lease arrangement with visibility from day one?** Olaris offers [business contract hire](/leasing/business-contract-hire) with Orbis fleet intelligence included — real-time mileage tracking, excess exposure alerts, and pooling visibility built in rather than bolted on afterwards.
+**Calculate your exposure →** Try the [free excess mileage calculator](/tools/excess-mileage-calculator) to see what excess charges could cost your fleet before end of contract.

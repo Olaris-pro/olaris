@@ -1,5 +1,5 @@
 ---
-title: "The Hidden Cost of Excess Mileage — and How to See It Coming"
+title: "The Hidden Cost of Excess Mileage, and How to See It Coming"
 metaTitle: "Excess Mileage Charges: Prevent £1000s in Fees"
 metaDescription: "Excess mileage charges blindside UK fleet managers every year. Learn how live odometer tracking prevents costly overages and saves thousands at lease return."
 category: "Mileage"
@@ -7,30 +7,30 @@ headerImage: "Dashboard showing odometer data and mileage allowance progress bar
 date: 2025-09-24
 faqSchema:
   - question: "What is an excess mileage charge?"
-    answer: "An excess mileage charge is a penalty levied by a leasing company when a vehicle is returned at the end of a contract having travelled more miles than the agreed allowance. The charge is calculated per mile over the limit — typically 5–15 pence per mile in the UK — and applied to all excess miles across the contract term. It is billed at vehicle return, by which point nothing can be done to avoid it."
+    answer: "An excess mileage charge is a penalty levied by a leasing company when a vehicle is returned at the end of a contract having travelled more miles than the agreed allowance. The charge is calculated per mile over the limit (typically 5 to 15 pence per mile in the UK) and applied to all excess miles across the contract term. It is billed at vehicle return, by which point nothing can be done to avoid it."
   - question: "How much are excess mileage charges per mile in the UK?"
-    answer: "Excess mileage charges in the UK typically range from 5 to 15 pence per mile, depending on the vehicle type and the terms negotiated at lease inception. Most standard lease agreements charge around 8 pence per mile. On a fleet where multiple vehicles are over their allowance, these per-mile charges accumulate rapidly — a 200-vehicle fleet with an average 10,000-mile overrun per vehicle would face £160,000 in charges at 8p per mile."
+    answer: "Excess mileage charges in the UK typically range from 5 to 15 pence per mile, depending on the vehicle type and the terms negotiated at lease inception. Most standard lease agreements charge around 8 pence per mile. On a fleet where multiple vehicles are over their allowance, these per-mile charges accumulate rapidly: a 200-vehicle fleet with an average 10,000-mile overrun per vehicle would face £160,000 in charges at 8p per mile."
   - question: "How can I prevent excess mileage charges?"
-    answer: "Excess mileage charges are preventable with real-time mileage monitoring. By tracking each vehicle's mileage against its contracted allowance continuously — rather than at lease return — fleet managers can identify vehicles trending over their limit months in advance. Action can then be taken: redistributing mileage across the fleet, adjusting driver allocation, or renegotiating the contract before charges accumulate."
+    answer: "Excess mileage charges are preventable with real-time mileage monitoring. By tracking each vehicle's mileage against its contracted allowance continuously, rather than at lease return, fleet managers can identify vehicles trending over their limit months in advance. Action can then be taken: redistributing mileage across the fleet, adjusting driver allocation, or renegotiating the contract before charges accumulate."
   - question: "Can I get excess mileage charges waived?"
     answer: "Once a vehicle is returned over its mileage allowance, charges are contractually owed and rarely waived. Some leasing companies will negotiate if the overage is minor and you have a long-standing relationship, but this is the exception rather than the rule. The only reliable way to avoid excess mileage charges is proactive tracking during the contract term."
   - question: "What is the average excess mileage per lease vehicle?"
-    answer: "Fleet industry data suggests that vehicles without active mileage monitoring commonly return with 5,000–15,000 excess miles over a three-year contract. For fleets of 50–200 vehicles, the aggregate excess mileage charge at contract end typically represents 3–7% of total fleet costs — a significant unbudgeted expense that is almost entirely avoidable."
+    answer: "Fleet industry data suggests that vehicles without active mileage monitoring commonly return with 5,000 to 15,000 excess miles over a three-year contract. For fleets of 50 to 200 vehicles, the aggregate excess mileage charge at contract end typically represents 3 to 7% of total fleet costs, a significant unbudgeted expense that is almost entirely avoidable."
 ---
 
-# The Hidden Cost of Excess Mileage — and How to See It Coming
+# The Hidden Cost of Excess Mileage, and How to See It Coming
 
 ## What is an excess mileage charge?
 
-An excess mileage charge is a penalty levied by a leasing company when a vehicle is returned at the end of a contract having travelled more miles than the agreed allowance. The charge is calculated per mile over the limit — typically 5–15 pence per mile in the UK, with 8 pence being the standard rate — and applied to every excess mile across the full contract term. It is billed at vehicle return, by which point nothing can be done to avoid it.
+An excess mileage charge is a penalty levied by a leasing company when a vehicle is returned at the end of a contract having travelled more miles than the agreed allowance. The charge is calculated per mile over the limit (typically 5 to 15 pence per mile in the UK, with 8 pence being the standard rate) and applied to every excess mile across the full contract term. It is billed at vehicle return, by which point nothing can be done to avoid it.
 
 The invoice arrived on a Tuesday in November.
 
-It was from the leasing company. A fleet manager we know was reviewing it when they called us, and their voice was flat. Controlled. The kind of flat you get when you've been hit by a number you didn't see coming.
+It was from the leasing company. A fleet manager I know was reviewing it when they called me, and their voice was flat. Controlled. The kind of flat you get when you've been hit by a number you didn't see coming.
 
 £160,000.
 
-That was excess mileage charges across their 200-vehicle fleet. Their vehicles were being returned, and they'd used significantly more miles than their lease agreements allowed. The leasing company had calculated the overage at 8 pence per mile — the standard industry rate — and sent the bill.
+That was excess mileage charges across their 200-vehicle fleet. Their vehicles were being returned, and they'd used significantly more miles than their lease agreements allowed. The leasing company had calculated the overage at 8 pence per mile, the standard industry rate, and sent the bill.
 
 The fleet manager had known it was coming, in a vague, abstract way. You always use more miles than you think. But the actual number shocked them. Because unlike fuel costs or maintenance spend, which you see creeping up month by month, excess mileage appears as a surprise invoice after the vehicles have already been returned.
 
@@ -42,11 +42,11 @@ Excess mileage charges are one of the least-managed cost lines in fleet operatio
 
 The typical lease agreement allows a certain annual mileage. In the UK, common allowances are 10,000 to 15,000 miles per vehicle per year. Some fleets use 20,000. The figure is usually negotiated at lease inception based on historical usage, and then it's largely forgotten.
 
-Then, three years later, when you return the vehicles, the leasing company measures the odometer and compares it to the allowance. If you've gone over, they charge you. The rate is standardised — usually 8 pence per mile — and it's cumulative across all your excess miles.
+Then, three years later, when you return the vehicles, the leasing company measures the odometer and compares it to the allowance. If you've gone over, they charge you. The rate is standardised (usually 8 pence per mile) and it's cumulative across all your excess miles.
 
 The maths are simple and brutal. A 200-vehicle fleet. Average overage of 10,000 miles per vehicle over a three-year lease. That's 2 million excess miles at 8p per mile. £160,000.
 
-We've seen excess mileage charges reach 5-7% of total fleet costs for fleets that weren't actively managing them. For a £2 million annual fleet spend, that's £100,000 to £140,000 in preventable charges.
+I've seen excess mileage charges reach 5 to 7% of total fleet costs for fleets that weren't actively managing them. For a £2 million annual fleet spend, that's £100,000 to £140,000 in preventable charges.
 
 Yet most fleets don't budget for this explicitly. They discover it when the bill arrives.
 
@@ -64,7 +64,7 @@ The root cause is simple: lack of visibility.
 
 ## The Maths: Why It Adds Up So Fast
 
-Let's be concrete:
+Here's a concrete example:
 
 A 50-vehicle fleet. Mixed vans and cars. Standard lease allowance: 12,000 miles per vehicle per year.
 
@@ -74,7 +74,7 @@ Over the three years, assume the fleet's average mileage grows by 5% per year du
 
 - Year 1: vehicles average 11,000 miles. Within allowance.
 - Year 2: vehicles average 11,550 miles. Still within allowance.
-- Year 3: vehicles average 12,127 miles. Now we're over.
+- Year 3: vehicles average 12,127 miles. Now the fleet is over.
 
 By the end of three years, that 5% growth means vehicles have collectively done an extra 1,839 miles each (on average) beyond the 36,000 allowed.
 
@@ -96,7 +96,7 @@ Some leasing companies offer mileage pooling. Instead of charging overage vehicl
 
 If your fleet allowance is 12,000 miles per vehicle × 50 vehicles = 600,000 miles over three years, and you do 610,000 miles, you pay for 10,000 excess miles (not 50 individual overages).
 
-Pooling helps, but it's not a solution — it's a band-aid. It reduces your visibility of which vehicles are driving the problem. It also only works if your leasing company offers it, and it typically comes with a premium (higher upfront lease costs).
+Pooling helps, but only as a band-aid. It reduces your visibility of which vehicles are driving the problem. It also only works if your leasing company offers it, and it typically comes with a premium (higher upfront lease costs).
 
 The real fix is knowing what you're tracking to and actively managing toward it.
 
@@ -110,7 +110,7 @@ Here's what changes when you have live mileage data:
 
 **You can intervene by vehicle and by driver.** Maybe vehicle ABC123, a van assigned to a major client, genuinely needs a higher mileage allowance. You have data to renegotiate the lease. Maybe vehicle DEF456 has an inefficient route plan. You can re-route. Maybe driver X is covering more territory than their peers. You can investigate whether there's a workload issue or a driving behaviour issue.
 
-**You can optimize fleet composition.** If you see that certain vehicle types are consistently exceeding their allowances, you can swap them for vehicles with higher allowances. Or you can negotiate lease terms that reflect your actual usage, rather than accepting a generic allowance.
+**You can optimise fleet composition.** If you see that certain vehicle types are consistently exceeding their allowances, you can swap them for vehicles with higher allowances. Or you can negotiate lease terms that reflect your actual usage, rather than accepting a generic allowance.
 
 ## Early Warning: Catching Overage 6 Months Before Return
 
@@ -151,7 +151,7 @@ For a fleet view, you need:
 
 If you don't have this dashboard, you're flying blind.
 
-## The Broader Impact: Pooled Mileage as a Competitive Advantage
+## Use Your Mileage Data to Renegotiate Lease Terms
 
 Some forward-thinking fleet managers are using mileage data not just to prevent overages, but to renegotiate lease terms.
 
@@ -187,12 +187,12 @@ With live data, you can make this negotiation not just for your current fleet, b
 
 9. Factor actual mileage data into your next lease negotiation.
 
-The fleets managing mileage actively are avoiding 30-50% of the excess mileage charges that surprise other fleets. That's thousands to tens of thousands of pounds in preventable costs.
+The fleets managing mileage actively are avoiding 30 to 50% of the excess mileage charges that surprise other fleets. That's thousands to tens of thousands of pounds in preventable costs.
 
 ---
 
 ## Next Step
 
-Live mileage tracking works best when it's integrated with your other fleet data: costs, driver behaviour, maintenance. If you'd like to see how projected mileage charges change when you have real-time visibility, [contact us](/contact). We can show you what your fleet's mileage exposure actually is — and what it could be with active management.
+Live mileage tracking works best when it's integrated with your other fleet data: costs, driver behaviour, maintenance. If you'd like to see how projected mileage charges change when you have real-time visibility, [contact me](/#contact). I can show you what your fleet's mileage exposure actually is, and what it could be with active management.
 
-**Try our free excess mileage calculator →** [Calculate your fleet's projected mileage charges](/tools/excess-mileage-calculator) — enter up to 10 vehicles and see which ones are heading for an excess charge before lease return.
+**Try the free excess mileage calculator →** [Calculate your fleet's projected mileage charges](/tools/excess-mileage-calculator): enter up to 10 vehicles and see which ones are heading for an excess charge before lease return.

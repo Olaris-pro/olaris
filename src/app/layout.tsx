@@ -4,6 +4,7 @@ import { Inter, Manrope, JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import { constructMetadata, organizationSchema } from '@/lib/seo'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { SiteChrome } from '@/components/layout/SiteChrome'
 import '@/styles/globals.css'
 
 const inter = Inter({
@@ -62,9 +63,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${manrope.variable} ${jetbrainsMono.variable} ${spaceGrotesk.variable} font-sans antialiased`}
       >
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <SiteChrome header={<Header />} footer={<Footer />}>
+          {children}
+        </SiteChrome>
 
         <Script
           src="https://subscribe-forms.beehiiv.com/attribution.js"

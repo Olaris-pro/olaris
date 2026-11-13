@@ -1,5 +1,5 @@
 ---
-title: "Five Systems, One Spreadsheet, and a Prayer: Why Fleet Data Needs a Single View"
+title: "Why Fleet Data Needs a Single View"
 metaTitle: "Fleet Data Management: Why Single-View Matters"
 metaDescription: "Telematics, fuel cards, DVLA, maintenance, insurance scattered across systems. Here's how to bring it together without rip-and-replace."
 category: "Thought Leadership"
@@ -7,7 +7,7 @@ headerImage: "Fleet operations dashboard with integrated data feeds: telematics,
 date: 2026-01-14
 ---
 
-# Five Systems, One Spreadsheet, and a Prayer: Why Fleet Data Needs a Single View
+# Why Fleet Data Needs a Single View
 
 Monday morning. 9:47 AM.
 
@@ -30,7 +30,7 @@ By 2:30 PM, she's finally reconciled the data. Turns out the DVLA was two days b
 
 By 4:00 PM, she's updating the spreadsheet manually because the telematics system doesn't export in the format she needs for the compliance audit. She's transcribing numbers.
 
-This is fleet management in 2026 for most operators. It's not a technology problem. It's a fragmentation problem.
+This is fleet management in 2026 for most operators. The problem is fragmentation.
 
 And it costs real money.
 
@@ -42,7 +42,7 @@ A fleet manager earning £32,000/year works 220 days per year. That's 1,760 work
 
 Cost: £7,500/year for just the labour wasted on system fragmentation.
 
-But that's not the real cost. The real cost is in the decisions she doesn't make because the data is too scattered to see clearly.
+But the real cost is in the decisions she doesn't make because the data is too scattered to see clearly.
 
 She can't run a utilisation report quickly because utilisation requires telematics (distance), fuel cards (cost), and DVLA (vehicle age). They're in three systems. By the time she's manually combined them, three weeks have passed and the insight is stale.
 
@@ -50,7 +50,7 @@ She can't spot an insurance renewal before it lapses because the calendar is sep
 
 She can't identify which vehicles should be de-fleeted early because depreciation data, maintenance cost data, and utilisation data are in three places. She doesn't put them together.
 
-The scattered data costs her fleet £30,000–£60,000 per year in missed decisions. Vehicles kept too long. Insurance lapses that cost a day of vehicle downtime. Maintenance issues that could have been caught early if the data was visible.
+The scattered data costs her fleet £30,000 to £60,000 per year in missed decisions. Vehicles kept too long. Insurance lapses that cost a day of vehicle downtime. Maintenance issues that could have been caught early if the data was visible.
 
 The £7,500 in labour waste is actually the smallest problem.
 
@@ -66,7 +66,7 @@ Cost: £200,000+ upfront, 6-month implementation, 3 months of parallel running, 
 
 **Good interpretation:** "Bring all your existing systems together in one place so you see everything in context."
 
-Cost: £15,000–£40,000 upfront, 4-6 week implementation, works with your current vendors, no replacement needed.
+Cost: £15,000 to £40,000 upfront, 4 to 6 week implementation, works with your current vendors, no replacement needed.
 
 I'm describing the second one. That's what matters.
 
@@ -84,7 +84,7 @@ Then you see everything in one place. A single dashboard where you can run a rep
 
 You don't have one system of record. You have one view of many systems of record.
 
-That's not hard. That's just connected thinking. And it changes fleet operations completely.
+None of that is hard. It takes connected thinking, and it changes fleet operations completely.
 
 ## The Integration Approach: Don't Rip and Replace
 
@@ -92,11 +92,11 @@ Here's why most fleets don't do this: they think it requires replacing everythin
 
 It doesn't.
 
-You can build a single-view system on top of your existing infrastructure in 4-6 weeks using APIs that already exist.
+You can build a single-view system on top of your existing infrastructure in 4 to 6 weeks using APIs that already exist.
 
 **Telematics:** If your provider has an API (most do), you can pull live vehicle data. If they don't, you can export daily extracts.
 
-**Fuel cards:** Shell, BP, Arval, Lex, Ryder — most provide API access. If not, they provide daily CSV exports.
+**Fuel cards:** Shell, BP, Arval, Lex, Ryder: most provide API access. If not, they provide daily CSV exports.
 
 **DVLA data:** You're probably using a service like GOV.UK DVLA checker or a commercial checker like Venson or Hypercare. They have APIs. You can pull your vehicle register and compliance status daily.
 
@@ -106,9 +106,9 @@ You can build a single-view system on top of your existing infrastructure in 4-6
 
 Four to six weeks of integration work. One unified system. Everything connected.
 
-**Total cost:** £15,000–£30,000 depending on complexity
+**Total cost:** £15,000 to £30,000 depending on complexity
 **Time to value:** 4 weeks
-**ROI payback:** 2–3 months (from labour savings alone)
+**ROI payback:** 2 to 3 months (from labour savings alone)
 
 Compare that to the cost of buying a new all-in-one system that replaces your existing vendors: £200,000+, 6 months, massive disruption, and you're paying them instead of your current vendors.
 
@@ -127,13 +127,13 @@ Your insurance company asks for confirmation that all your vehicles have valid M
 - Compile a spreadsheet
 - Send it
 
-Time: 3–4 hours per vehicle, minimum.
+Time: 3 to 4 hours per vehicle, minimum.
 
 With a single view: You click "Compliance Report." The system shows all vehicles, MOT dates, insurance expiry dates, any out-of-compliance items. You send the report. Done. Time: 5 minutes.
 
 **Scenario: Cost per mile analysis (currently takes 6 hours).**
 
-Your finance team asks: which vehicles are our most expensive to operate?
+Your finance team asks: which vehicles are the most expensive to operate?
 
 Currently, you need to manually combine:
 - Utilisation from telematics (miles driven)
@@ -202,7 +202,7 @@ Decisions: Reallocate routes to balance utilisation, adjust driver schedules, de
 
 None of these insights happened by accident. They happened because the data was visible.
 
-## The Decision-Making Speed Advantage
+## Connected Data Makes Decisions Faster
 
 Here's the thing that doesn't show up in spreadsheets but matters massively in real operations:
 
@@ -227,26 +227,26 @@ Do this 20 times per year (not unusual for a 40-vehicle fleet) and you've recove
 
 You don't have to connect everything at once. Smart fleets phase the integration:
 
-**Phase 1 (Week 1-2):** Connect telematics and vehicle register. Now you have real-time visibility of where your vehicles are and what they're doing.
+**Phase 1 (Weeks 1 to 2):** Connect telematics and vehicle register. Now you have real-time visibility of where your vehicles are and what they're doing.
 
-**Phase 2 (Week 3-4):** Add fuel card data. Now you can run utilisation vs. cost analysis.
+**Phase 2 (Weeks 3 to 4):** Add fuel card data. Now you can run utilisation vs. cost analysis.
 
-**Phase 3 (Week 5-6):** Add DVLA compliance data. Now you have automated MOT and insurance tracking.
+**Phase 3 (Weeks 5 to 6):** Add DVLA compliance data. Now you have automated MOT and insurance tracking.
 
 **Phase 4 (ongoing):** Add maintenance, insurance, driver data as you go.
 
 By phase 3, you're already seeing benefits. By the end, you have true single-view operations.
 
-## Why This Matters to Your Fleet's Future
+## Fleets With a Single View Catch Problems Earlier
 
 The fleets that operate with fragmented data are optimising on incomplete information. They make reasonable decisions based on what they can see, but they're flying partly blind.
 
 The fleets that have a single view of their data are optimising on complete information. They catch problems earlier. They make better decisions. They avoid waste.
 
-The difference compounds over time. A fleet that catches one major problem early (a vehicle issue, a compliance drift, a utilisation mismatch) saves £5,000–£15,000. Do that twice a year and you've paid for the integration four times over.
+The difference compounds over time. A fleet that catches one major problem early (a vehicle issue, a compliance drift, a utilisation mismatch) saves £5,000 to £15,000. Do that twice a year and you've paid for the integration four times over.
 
 Your data is already in your systems. It's already being tracked. You're just not seeing it together. That's fixable. And it's worth fixing.
 
 ---
 
-**Ready to bring your fleet data together?** [Talk to us about a single-view integration](/contact) or [explore how Olaris connects your systems](/platform).
+**If you want to bring your fleet data together,** [talk to me about a single-view integration](/#contact).
